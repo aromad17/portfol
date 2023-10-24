@@ -7,9 +7,6 @@
     overflow: hidden;
 
     video {
-        min-width: 100%;
-        min-height: 100%;
-        object-fit: cover;
         filter: blur(5px) contrast(1.2);
     }
 
@@ -240,7 +237,16 @@
 @media screen and (max-width:1300px) {
     .home {
 
+        video {
+            filter: blur(5px);
+        }
+
         .introduceText {
+
+            height: 100%;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5);
+
 
             .hello {
                 font-size: 30px;
