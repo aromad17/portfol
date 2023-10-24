@@ -11,7 +11,7 @@ function About({ checkHome, setCheckHome, handleWheel }) {
         class TextScramble {
             constructor(el) {
                 this.el = el
-                this.chars = '!<>-_\\/[]{}—=+*^?#___'
+                this.chars = '!<>-_\]{—=+*?#_'
                 this.update = this.update.bind(this)
             }
             setText(newText) {

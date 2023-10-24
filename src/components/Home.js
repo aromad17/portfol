@@ -7,12 +7,37 @@ function Home({ checkHome, setCheckHome }) {
     const [checkWidth, setCheckWidth] = useState(false);
     const [addClass, setAddClass] = useState(false);
     const [homePosition, setHomePosition] = useState(false);
+    const [startY, setStartY] = useState(null);
+
 
     setCheckHome(false);
     const textTime = setTimeout(() => {
         setAddClass(true);
     }, 0);
 
+
+
+    const handleTouchStart = (e) => {
+        setStartY(e.touches[0].clientY);
+    };
+
+    const handleTouchEnd = () => {
+        setStartY(null);
+    };
+
+    const handleTouchMove = (e) => {
+        if (startY) {
+            const currentY = e.touches[0].clientY;
+            const deltaY = currentY - startY;
+
+            if (deltaY > 0) {
+                console.log('Swipe Down');
+            } else if (deltaY < 0) {
+                console.log('Swipe Up');
+                navigate('/about');
+            }
+        }
+    };
 
     window.addEventListener("scroll", () => {
 
@@ -139,7 +164,12 @@ function Home({ checkHome, setCheckHome }) {
     }, [])
 
     return (
-        <div className={`home ${homePosition ? 'on' : ''}`} onWheel={handleWheel}>
+        <div className={`home ${homePosition ? 'on' : ''}`}
+            onWheel={handleWheel}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
 
             {checkWidth ?
                 <video src={process.env.PUBLIC_URL + '/img/develope_mo.mp4'} muted={true} autoPlay={true} loop={true} type="video/mp4">
@@ -151,7 +181,7 @@ function Home({ checkHome, setCheckHome }) {
 
 
             <div className={`introduceText ${addClass ? 'on' : ''}`}>
-                <div className="hello">안녕하세요!</div>
+                <div className="hello">안녕하세요 !</div>
                 <div className="whatIam">
                     {/* 텍스트효과부분 */}
                     <div id="container">

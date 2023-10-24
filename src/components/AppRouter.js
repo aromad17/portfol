@@ -5,6 +5,7 @@ import About from './About'
 import Work from './Work'
 import Contact from './Contact'
 import Nav from './Nav'
+import Footer from './Footer'
 
 
 const Layout = () => {
@@ -12,6 +13,7 @@ const Layout = () => {
         <div>
             <Nav />
             <Outlet />
+            <Footer />
         </div >
     )
 }

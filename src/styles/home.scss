@@ -7,7 +7,9 @@
     overflow: hidden;
 
     video {
-        width: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
         filter: blur(5px) contrast(1.2);
     }
 
@@ -233,4 +235,105 @@
     }
 
 
+}
+
+@media screen and (max-width:1300px) {
+    .home {
+
+        .introduceText {
+
+            .hello {
+                font-size: 30px;
+
+                span {
+                    font-size: 30px;
+                }
+
+            }
+
+            .whatIam {
+
+                padding: 0px;
+                box-sizing: border-box;
+
+
+                #text1,
+                #text2 {
+                    font-size: 30px;
+                }
+
+                ::before {
+                    left: 0%;
+                    font-size: 30px;
+                    margin-right: 20px;
+                }
+
+                ::after {
+                    right: 0%;
+                    font-size: 30px;
+                    margin-left: 20px;
+                }
+
+            }
+
+        }
+
+
+
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width:300px) {
+    .home {
+
+
+        .introduceText {
+
+
+            .whatIam {
+                position: relative;
+                display: inline-block;
+                height: 5vh;
+                margin: 0;
+                padding: 0;
+
+                ::before {
+                    content: "[";
+                    position: absolute;
+                    left: 10%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: inline-block;
+                    font-size: 8vw;
+                    color: #fff;
+                }
+
+                ::after {
+                    content: "]";
+                    position: absolute;
+                    right: 10%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: inline-block;
+                    font-size: 8vw;
+                    color: #fff;
+
+                }
+
+                ::before,
+                ::after {
+                    animation: blink 2s linear 0s infinite;
+                }
+
+            }
+
+        }
+
+
+    }
 }
