@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/portfol/static/css/main.928b8d8b.css",
-    "main.js": "/portfol/static/js/main.dd9e7c2b.js",
-    "static/js/787.8d4efb73.chunk.js": "/portfol/static/js/787.8d4efb73.chunk.js",
+    "main.css": "/portfol/static/css/main.b1405916.css",
+    "main.js": "/portfol/static/js/main.8f1adede.js",
     "static/media/SCDream7.otf": "/portfol/static/media/SCDream7.a8d826f4cafb0e728051.otf",
     "static/media/SCDream6.otf": "/portfol/static/media/SCDream6.4df12ee03e70b6326c25.otf",
     "static/media/SCDream1.otf": "/portfol/static/media/SCDream1.3f28bc17ecb809862c69.otf",
@@ -10,14 +9,14 @@
     "static/media/SCDream3.otf": "/portfol/static/media/SCDream3.1e55b77199a0afd0ed9a.otf",
     "static/media/SCDream5.otf": "/portfol/static/media/SCDream5.ae5ee4933db75a3ccb04.otf",
     "static/media/SCDream4.otf": "/portfol/static/media/SCDream4.64c9dc7c860af7a004ad.otf",
+    "static/media/me.jpg": "/portfol/static/media/me.7b0fa3c20fd5de2178f2.jpg",
     "static/media/logo.svg": "/portfol/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/portfol/index.html",
-    "main.928b8d8b.css.map": "/portfol/static/css/main.928b8d8b.css.map",
-    "main.dd9e7c2b.js.map": "/portfol/static/js/main.dd9e7c2b.js.map",
-    "787.8d4efb73.chunk.js.map": "/portfol/static/js/787.8d4efb73.chunk.js.map"
+    "main.b1405916.css.map": "/portfol/static/css/main.b1405916.css.map",
+    "main.8f1adede.js.map": "/portfol/static/js/main.8f1adede.js.map"
   },
   "entrypoints": [
-    "static/css/main.928b8d8b.css",
-    "static/js/main.dd9e7c2b.js"
+    "static/css/main.b1405916.css",
+    "static/js/main.8f1adede.js"
   ]
 }
