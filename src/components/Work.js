@@ -1,9 +1,11 @@
 import React from "react";
-function Work() {
+
+function Work({ setCheckHome }) {
+    setCheckHome(true);
 
     return (
         <div className="work">
-
+            work
         </div>
     )
 

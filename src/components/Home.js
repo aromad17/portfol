@@ -1,12 +1,39 @@
 import React, { useEffect, useState } from "react";
 import "../styles/home.scss"
+import { useNavigate } from 'react-router-dom';
 
-function Home() {
-
+function Home({ checkHome, setCheckHome }) {
+    const navigate = useNavigate();
     const [checkWidth, setCheckWidth] = useState(false);
+    const [addClass, setAddClass] = useState(false);
+    const [homePosition, setHomePosition] = useState(false);
+
+    setCheckHome(false);
+    const textTime = setTimeout(() => {
+        setAddClass(true);
+    }, 0);
+
+
+    window.addEventListener("scroll", () => {
+
+        console.log(window.scrollX, window.scrollY);
+        let scrollTop = window.scrollY;
+        if (scrollTop > 100) {
+            setHomePosition(true);
+        }
+    })
+
+    const handleWheel = (e) => {
+        if (e.deltaY > 0) {
+            navigate('/about');
+            setCheckHome(true);
+        }
+    };
+
 
     useEffect(() => {
-        const screenWdith = window.innerWidth;
+
+        let screenWdith = window.innerWidth;
 
         if (screenWdith < 1300) {
             setCheckWidth(true);
@@ -37,8 +64,8 @@ function Home() {
         ];
 
         // Controls the speed of morphing.
-        const morphTime = 1;
-        const cooldownTime = 1;
+        const morphTime = 0.5;
+        const cooldownTime = 0.5;
 
         let textIndex = texts.length - 1;
         let time = new Date();
@@ -103,11 +130,16 @@ function Home() {
                 doCooldown();
             }
         }
+
         animate();
+
+
+
+
     }, [])
 
     return (
-        <div className="home">
+        <div className={`home ${homePosition ? 'on' : ''}`} onWheel={handleWheel}>
 
             {checkWidth ?
                 <video src={process.env.PUBLIC_URL + '/img/develope_mo.mp4'} muted={true} autoPlay={true} loop={true} type="video/mp4">
@@ -118,7 +150,7 @@ function Home() {
             }
 
 
-            <div className="introduceText">
+            <div className={`introduceText ${addClass ? 'on' : ''}`}>
                 <div className="hello">안녕하세요!</div>
                 <div className="whatIam">
                     {/* 텍스트효과부분 */}
@@ -142,8 +174,17 @@ function Home() {
                     </svg>
                     {/* 텍스트효과부분 */}
                 </div>
-                <div className="hello">프론트엔드 개발자 <span>" 이상현 " </span>입니다.</div>
+                <div className="hello"><span>" 이상현 " </span>입니다.</div>
             </div>
+
+            <div className={`scroll_down ${addClass ? 'on' : ''}`}>
+                <div className="chevron"></div>
+                <div className="chevron"></div>
+                <div className="chevron"></div>
+                <span className="text">Scroll down</span>
+            </div>
+
+
         </div>
     )
 

@@ -1,9 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { FaHome, FaUserAlt, FaPhone, FaAlignJustify } from "react-icons/fa";
 import "../styles/nav.scss"
-function Nav() {
+import { useNavigate } from 'react-router-dom';
+
+function Nav({ checkHome }) {
+
+    const navigate = useNavigate();
+
+    const onClick = (page) => {
+        navigate(`/${page}`);
+    }
 
 
     useEffect(() => {
+
         window.addEventListener('scroll', () => {
 
             const scrollPosition = window.scrollY;
@@ -15,17 +25,15 @@ function Nav() {
             }
         });
 
-        // Clean up the event listener on unmount
-
     }, []);
 
     return (
-        <div className="nav">
+        <div className={`${checkHome ? 'nav' : 'noNav'}`}>
             <ul>
-                <li>HOME</li>
-                <li>ABOUT</li>
-                <li>WORK</li>
-                <li>CONTACT</li>
+                <li onClick={() => onClick("")} ><FaHome /></li>
+                <li onClick={() => onClick("about")}><FaUserAlt /></li>
+                <li onClick={() => onClick("work")}><FaAlignJustify /></li>
+                <li onClick={() => onClick("contact")}><FaPhone /></li>
             </ul>
         </div>
     );

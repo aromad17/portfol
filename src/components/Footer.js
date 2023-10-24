@@ -15,8 +15,6 @@ function Footer() {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-
-        // Clean up the event listener on unmount
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -24,8 +22,9 @@ function Footer() {
 
     return (
         <div className="footer">
-            <div className="progress" style={{ width: `${scrollProgress}%` }}></div>
+            <div className="progress" style={{ width: `${scrollProgress}%` }}>
 
+            </div>
         </div>
     );
 }
