@@ -172,10 +172,10 @@ function Home({ checkHome, setCheckHome }) {
         >
 
             {checkWidth ?
-                <video src={process.env.PUBLIC_URL + '/img/develope_mo.mp4'} muted={true} autoPlay={true} loop={true} type="video/mp4">
+                <video src={process.env.PUBLIC_URL + '/img/develope_mo.mp4'} muted autoPlay loop playsInline type="video/mp4">
                 </video>
                 :
-                <video src={process.env.PUBLIC_URL + '/img/develope.mp4'} muted={true} autoPlay={true} loop={true} type="video/mp4">
+                <video src={process.env.PUBLIC_URL + '/img/develope.mp4'} muted autoPlay loop playsInline type="video/mp4">
                 </video>
             }
 
