@@ -30,10 +30,10 @@ function Home({ checkHome, setCheckHome }) {
             const currentY = e.touches[0].clientY;
             const deltaY = currentY - startY;
 
-            if (deltaY > 0) {
+            if (deltaY > -30) {
                 console.log('Swipe Down');
-            } else if (deltaY < 0) {
-                console.log('Swipe Up');
+            } else if (deltaY < -50) {
+                console.log(deltaY);
                 navigate('/about');
             }
         }
