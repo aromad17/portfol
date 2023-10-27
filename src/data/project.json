@@ -1,0 +1,111 @@
+{
+    "Project": [
+        {
+            "id": 1,
+            "name": "삼성전기",
+            "class": "ss_elec",
+            "skill": [
+                "HTML",
+                "CSS",
+                "JAVASCRIPT"
+            ],
+            "function": [
+                "CSS를 활용한 Animation 구현",
+                "JAVASCRIPT를 이용한 2depth 헤더",
+                "Image-Slide 구현",
+                "스크롤 위치에 따라 실행되는 애니메이션 구현",
+                "hover에 따라 변경되는 이미지 애니메이션"
+            ],
+            "page_link": "http://ss_electric.sanghyeonzzang.com/",
+            "github_link": "https://github.com/aromad17/samsung-electric_clone",
+            "video_url": "/img/ss_elec.webm"
+        },
+        {
+            "id": 2,
+            "name": "삼성엔지니어링",
+            "class": "ss_engi",
+            "skill": [
+                "HTML",
+                "CSS",
+                "JAVASCRIPT"
+            ],
+            "function": [
+                "media query를 이용한 반응형 웹 페이지",
+                "CSS를 활용한 Animation 구현",
+                "form,table 양식 서브 페이지 구현",
+                "JAVASCRIPT로 영상배너 연속재생 및 pagination 구현",
+                "중복되는 자바스크립트 코드 함수로 만들어 여러곳에서 활용",
+                "스크롤 위치에 따라 실행되는 애니메이션 구현"
+            ],
+            "page_link": "http://ss_engineering.sanghyeonzzang.com/",
+            "github_link": "https://github.com/aromad17/samsung-engineering_clone",
+            "video_url": "/img/ss_engi.mp4"
+        },
+        {
+            "id": 3,
+            "name": "CJ ONE",
+            "class": "cjone",
+            "skill": [
+                "HTML",
+                "CSS",
+                "JAVASCRIPT"
+            ],
+            "function": [
+                "media query를 이용한 반응형 웹 페이지(태블릿 사이즈까지 지원)",
+                "CSS를 활용한 Animation 구현",
+                "JAVASCRIPT을 이용해 이미지파일을 연속적으로 재생해 gif파일처럼 구현",
+                "중복되는 코드 함수로 만들어 여러곳에서 활용"
+            ],
+            "page_link": "http://cjoneee.sanghyeonzzang.com/",
+            "github_link": "https://github.com/aromad17/cjone_clone",
+            "video_url": "/img/cjone.webm"
+        },
+        {
+            "id": 4,
+            "name": "메신저 앱",
+            "class": "messanger",
+            "skill": [
+                "HTML",
+                "CSS",
+                "JAVASCRIPT",
+                "REACT",
+                "FIREBASE"
+            ],
+            "function": [
+                "REACT DOM ROUTER를 이용한 SPA 사이트",
+                "FIREBASE와 연동하여 실시간 데이터 수정 가능",
+                "FIREBASE의 Auth 기능을 이용하여 google,github 계정으로 회원가입 가능",
+                "FIREBASE를 이용해 내 채팅 전송,개인 정보 수정 및 이미지 파일 전송, 저장 가능",
+                "json파일로 데이터를 만들고 이용하여 화면 컨텐츠 구성",
+                "SCSS를 이용한 스타일링"
+            ],
+            "page_link": "https://kkotalk.sanghyeonzzang.com/",
+            "github_link": "https://github.com/aromad17/kkotalk",
+            "video_url": "/img/messanger.webm"
+        },
+        {
+            "id": 5,
+            "name": "MOVIEFLIX",
+            "class": "movie",
+            "skill": [
+                "HTML",
+                "CSS",
+                "JAVASCRIPT",
+                "REACT",
+                "FIREBASE"
+            ],
+            "function": [
+                "REACT DOM ROUTER를 이용한 SPA 사이트",
+                "MOVIEDB의 영화 api와 axios를 이용해 화면 구성",
+                "중첩 라우팅을 사용하여 이뤄진 레이아웃 제작",
+                "Swiper를 사용한 슬라이드 구현",
+                "커스텀 Hook을 제작하여 내가 만든 나의 기능 사용",
+                "SCSS를 이용한 스타일링",
+                "Styled Component로 제작된 Footer"
+            ],
+            "page_link": "https://movieflix.sanghyeonzzang.com/",
+            "github_link": "https://github.com/aromad17/netflix",
+            "video_url": "/img/movie.mp4"
+        }
+    ]
+}

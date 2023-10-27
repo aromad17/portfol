@@ -4,7 +4,6 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background: #1e272e;
     margin: 0 auto;
 
     .about_inner {
@@ -67,7 +66,7 @@
 
                 .titleWrap {
                     width: 100%;
-                    color: #fff;
+
                     margin-bottom: 30px;
 
                     .helloTit {
@@ -79,6 +78,8 @@
                         animation-duration: 5s;
                         animation-iteration-count: infinite;
                         animation-direction: alternate;
+                        text-decoration: underline;
+                        text-underline-offset: 10px;
                     }
 
                     h1 {
@@ -89,7 +90,7 @@
                         .text {
                             font-family: SCDream7;
                             display: inline-block;
-                            margin-left: 20px;
+                            margin-left: 10px;
                             color: #ffa801;
                         }
 
@@ -114,7 +115,7 @@
                         font-family: SCDream5;
                         font-size: 24px;
                         line-height: 100px;
-                        color: #fff;
+
                     }
 
                     ul {
@@ -123,13 +124,16 @@
                         flex-wrap: wrap;
 
                         li {
+                            font-family: SCDream5;
                             width: 50%;
+                            font-weight: 600;
                             font-size: 16px;
                             color: #ffa801;
                             margin-bottom: 20px;
 
                             span {
                                 color: #fff;
+                                letter-spacing: 1px;
                             }
                         }
                     }
@@ -140,7 +144,7 @@
     }
 }
 
-@media screen and (max-width:925px) {
+@media screen and (max-width:954px) {
     .about {
         display: flex;
         justify-content: center;
@@ -210,7 +214,7 @@
 
                     .titleWrap {
                         width: 100%;
-                        color: #fff;
+
                         margin-bottom: 30px;
 
                         .helloTit {
@@ -228,13 +232,6 @@
                             font-family: SCDream7;
                             font-size: 32px;
                             line-height: 80px;
-
-                            .text {
-                                font-family: SCDream7;
-                                display: inline-block;
-                                margin-left: 20px;
-                                color: #ffa801;
-                            }
 
                             .dud {
                                 color: #ffc048;
@@ -257,7 +254,7 @@
                             font-family: SCDream5;
                             font-size: 24px;
                             line-height: 100px;
-                            color: #fff;
+
                         }
 
                         ul {
@@ -271,9 +268,7 @@
                                 color: #ffa801;
                                 margin-bottom: 20px;
 
-                                span {
-                                    color: #fff;
-                                }
+                                span {}
                             }
                         }
                     }
@@ -343,6 +338,7 @@
                         .helloTit {
                             font-size: 4vw;
                             line-height: 2vh;
+                            margin-bottom: 20px;
                         }
 
                         h1 {
@@ -352,7 +348,7 @@
 
                         p {
                             font-size: 2.5vw;
-                            line-height: 2vh;
+                            line-height: 2.7vh;
                         }
 
                     }
@@ -365,8 +361,8 @@
 
                         ul {
                             li {
-                                font-size: 3vw;
-                                line-height: 1.5vh;
+                                font-size: 2.5vw;
+                                line-height: 2vh;
                             }
                         }
                     }

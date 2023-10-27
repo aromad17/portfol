@@ -116,10 +116,10 @@ function About({ checkHome, setCheckHome, handleWheel }) {
                         <div className="info">
                             <h2 className="infoTit">Info</h2>
                             <ul>
-                                <li>이름 : <span>이상현</span></li>
-                                <li>생년월일 : <span>11.17.1993</span></li>
-                                <li>전화 : <span>010.6685.0145</span></li>
-                                <li>이메일 : <span>aromad1117@gmail.com</span></li>
+                                <li>이름 &nbsp;:&nbsp; <span>이상현</span></li>
+                                <li>생년월일 &nbsp;:&nbsp; <span>11.17.1993</span></li>
+                                <li>전화 &nbsp;:&nbsp; <span>010.6685.0145</span></li>
+                                <li>이메일 &nbsp;:&nbsp; <span>aromad1117@gmail.com</span></li>
                             </ul>
                         </div>
 

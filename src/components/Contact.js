@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 function Contact({ setCheckHome }) {
 
     setCheckHome(true);
 
 
     return (
-        <div className="contact">
-            contact
+        <div className="contact" style={{ backgroundImage: "url(../../public/img/movie.png)" }}>
+
         </div>
     )
 

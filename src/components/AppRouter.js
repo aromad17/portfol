@@ -8,12 +8,13 @@ import Nav from './Nav'
 import Footer from './Footer'
 
 
-const Layout = () => {
+const Layout = ({ checkHome, setCheckHome }) => {
     return (
         <div>
             <Nav />
             <Outlet />
-            <Footer />
+            {checkHome ? null : <Footer checkHome={checkHome} setCheckHome={setCheckHome} />}
+
         </div >
     )
 }

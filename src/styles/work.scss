@@ -1,0 +1,582 @@
+.work {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    .work_inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 1440px;
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+
+        .work_tit {
+            width: 100%;
+            margin: 30px 0 4vh;
+            text-transform: uppercase;
+            letter-spacing: .5em;
+            border-width: 4px 0;
+
+            h1 {
+                font: 600 10vh SCDream7;
+                letter-spacing: 0;
+                display: block;
+                margin: 0 auto;
+                text-shadow: 0 0 200px rgba(255, 255, 255, .5);
+                text-align: center;
+                background: url(../../public/img/animated-text-fill.png) repeat-y;
+                background-size: cover;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: aitf 80s linear infinite;
+                -webkit-transform: translate3d(0, 0, 0);
+                -webkit-backface-visibility: hidden;
+            }
+        }
+
+        .work_con {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 80px;
+
+
+            .list_control {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 50px;
+                width: 100%;
+                margin-top: 50px;
+                text-align: center;
+
+                a {
+                    display: inline-block;
+                    cursor: pointer;
+
+                    * {
+                        width: 30px;
+                        height: 30px;
+                        stroke: #fff;
+                    }
+                }
+
+            }
+
+            .work_list {
+                position: relative;
+                width: 100%;
+                height: 90%;
+                min-height: 600px;
+                overflow: hidden;
+
+                >ul {
+                    position: absolute;
+                    top: 0;
+                    left: 0%;
+                    width: 600%;
+                    height: 100%;
+                    transition: opacity 0.2s;
+
+                    >li {
+                        float: left;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5%;
+                        width: 16.66%;
+                        height: 100%;
+                        border: 5px solid #fff;
+                        border-radius: 20px;
+                        background-color: #485460;
+                        padding: 5vh;
+                        box-sizing: border-box;
+
+                        .left {
+                            width: 40%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            transition: all 0s;
+                            overflow: hidden;
+
+                            .mockup {
+                                position: relative;
+                                width: 100%;
+                                height: calc(100% - 220px);
+                                background-size: 100% 100%;
+                                margin-bottom: 30px;
+
+                                .video_box {
+                                    position: absolute;
+                                    top: 130%;
+                                    left: 50%;
+                                    transform: translate(-50%, 0%);
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: rgba(0, 0, 0, 0.8);
+                                    border-radius: 10px;
+                                    opacity: 0;
+                                    transition: all 0.5s ease-out 0s;
+                                }
+
+                                video {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    max-width: 90%;
+                                }
+
+                            }
+
+                            .mockup:hover {
+                                .video_box {
+                                    top: 0;
+                                    opacity: 1;
+                                }
+                            }
+
+                            .w3c {
+                                display: flex;
+                                flex-direction: column;
+
+                                ul {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 20px;
+
+                                    li {
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        height: 30px;
+                                        padding: 0 10px;
+                                        border: 1px solid #fff;
+                                        border-radius: 5px;
+                                        font-family: SCDream4;
+                                        font-size: 10px;
+                                    }
+
+
+                                }
+
+                            }
+
+                            .w3c.noW3c ul li:first-child {
+                                width: 30%;
+                                text-align: center;
+                            }
+
+                            .w3c.noW3c ul li:last-child {
+                                display: none;
+                            }
+                        }
+
+                        .right {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            width: 50%;
+                            height: 100%;
+
+                            .project_tit {
+
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: start;
+                                align-items: start;
+
+                                h2 {
+                                    font-family: SCDream5;
+                                    font-size: 3vw;
+                                    line-height: 200%;
+                                }
+
+                                .used_skills {
+                                    display: flex;
+                                    margin-bottom: 30px;
+
+                                    li {
+                                        margin-right: 10px;
+                                        padding: 5px 10px;
+                                        background-color: #ffa801;
+                                        font-family: SCDream5;
+                                        font-size: 1vh;
+                                        font-weight: 900;
+                                        color: #485460;
+                                        border-radius: 30px;
+                                    }
+                                }
+
+                            }
+
+
+
+                            .technique_list {
+
+                                margin-bottom: 50px;
+
+                                dt {
+                                    font-family: SCDream4;
+                                    font-weight: 600;
+                                    font-size: 3vh;
+                                    margin-bottom: 10px;
+                                }
+
+                                dd {
+                                    position: relative;
+                                    font-size: 1.5vh;
+                                    line-height: 220%;
+                                    word-break: keep-all;
+                                }
+
+                                // dd:before {
+                                //     content: "";
+                                //     display: block;
+                                //     position: absolute;
+                                //     top: 50%;
+                                //     left: 0;
+                                //     transform: translateY(-2px);
+                                //     width: 4px;
+                                //     height: 4px;
+                                //     border-radius: 50%;
+                                //     background: #fff;
+                                // }
+                            }
+
+                            .link {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                li {
+
+
+                                    a {
+                                        display: inline-block;
+                                        font-size: 2vw;
+                                        color: #fff;
+                                    }
+
+                                    a :hover {
+                                        color: #ffa801;
+                                    }
+
+                                }
+
+                                li:first-child {
+                                    margin-right: 30px;
+                                }
+                            }
+                        }
+                    }
+
+                    >li.ss_elec {
+                        .left {
+                            .mockup {
+                                background: url(../../public/img/ss_elec.png);
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: 50% 50%;
+                            }
+                        }
+
+                        .right {
+                            h2 {
+                                background: linear-gradient(to right, #043285 -30%, #fff 100%);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                        }
+                    }
+
+                    >li.ss_engi {
+                        .left {
+                            .mockup {
+                                background: url(../../public/img/ss_engi.png);
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: 50% 50%;
+                            }
+                        }
+
+                        .right {
+                            h2 {
+                                background: linear-gradient(to right, #043285 -30%, #fff 100%);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                        }
+                    }
+
+                    >li.cjone {
+                        .left {
+                            .mockup {
+                                background: url(../../public/img/cj.png);
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: 50% 50%;
+                            }
+                        }
+
+                        .right {
+                            h2 {
+                                background: linear-gradient(to right, #212121 -20%, #fff 100%);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                        }
+                    }
+
+                    >li.messanger {
+                        .left {
+                            .mockup {
+                                background: url(../../public/img/messanger.png);
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: 50% 50%;
+                            }
+                        }
+
+                        .right {
+                            h2 {
+                                background: linear-gradient(to right, #9d3346 -30%, #fff 100%);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                        }
+                    }
+
+                    >li.movie {
+                        .left {
+                            .mockup {
+                                background: url(../../public/img/movie.png);
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: 50% 50%;
+                            }
+                        }
+
+
+                        .right {
+                            h2 {
+                                background: linear-gradient(to right, #e40913 -30%, #fff 100%);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.work:-webkit-scrollbar {
+    display: none;
+}
+
+
+@media screen and (max-width:865px) {
+    .work {
+        width: 100vw;
+
+
+        .work_inner {
+            position: relative;
+            max-width: 1440px;
+            width: 90%;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+
+            .work_con {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 50px;
+
+                .work_tit {
+                    width: 100%;
+                    margin: 50px auto 5vh;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    border-width: 4px 0;
+
+                    h1 {
+                        font: 600 45px SCDream7;
+                        letter-spacing: 0;
+                        display: block;
+                        margin: 0 auto;
+                        text-shadow: 0 0 200px rgba(255, 255, 255, .5);
+                        text-align: center;
+                        background: url(../../public/img/animated-text-fill.png) repeat-y;
+                        background-size: cover;
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        animation: aitf 80s linear infinite;
+                        -webkit-transform: translate3d(0, 0, 0);
+                        -webkit-backface-visibility: hidden;
+                    }
+                }
+
+                .work_list {
+                    width: 100%;
+                    min-height: 800px;
+                    max-height: 100vh;
+
+
+                    >ul {
+
+                        >li {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0%;
+                            height: 100%;
+                            border: 5px solid #fff;
+                            border-radius: 20px;
+                            padding: 0 20px;
+
+                            .left {
+                                width: 100%;
+                                min-height: 250px;
+                                height: unset;
+                                display: flex;
+                                flex-direction: column;
+
+                                .mockup {
+                                    width: 100%;
+                                    min-width: 200px;
+                                    height: 100%;
+                                    min-height: 150px;
+                                    margin-bottom: 0;
+                                }
+
+                                .w3c {
+                                    margin-top: 10px;
+
+                                    ul {
+                                        flex-direction: column;
+
+                                        li {
+                                            justify-content: center;
+                                            height: unset;
+                                            text-align: center;
+                                            padding: 5px 10px;
+                                            border: 1px solid #fff;
+                                            border-radius: 5px;
+                                            font-family: SCDream4;
+                                            font-size: 1vh;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .right {
+                                width: 100%;
+                                justify-content: start;
+
+                                .project_tit {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: start;
+                                    align-items: start;
+                                    margin-top: 30px;
+
+
+                                    h2 {
+                                        font-family: SCDream5;
+                                        font-size: 3.5vh;
+                                        line-height: 200%;
+                                        margin-bottom: 10px;
+                                    }
+
+                                    .used_skills {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        margin-bottom: 30px;
+
+                                        li {
+                                            margin-right: 5px;
+                                            margin-bottom: 5px;
+                                            padding: 3px 8px;
+                                            background-color: #ffa801;
+                                            font-family: SCDream5;
+                                            font-size: 1vh;
+                                            font-weight: 900;
+                                            color: #485460;
+                                            border-radius: 30px;
+                                        }
+
+                                    }
+
+                                }
+
+
+
+                                .technique_list {
+                                    margin-bottom: 5vh;
+
+                                    dt {
+                                        font-size: 2.5vh;
+                                        margin-bottom: 15px;
+                                    }
+
+                                    dd {
+                                        font-size: 1.5vh;
+                                        line-height: 200%;
+                                    }
+                                }
+
+                                .link {
+                                    li {
+                                        margin-right: 0;
+
+                                        a {
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            font-size: 3vh;
+                                        }
+                                    }
+
+
+
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}

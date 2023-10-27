@@ -1,0 +1,118 @@
+ {/* 삼성엔지  */}
+                            <li className="ss_engineering">
+                                <div className="left">
+                                    <div className="mockup"></div>
+                                </div>
+                                <div className="right">
+                                    <h2>삼성전기 클론 사이트</h2>
+                                    <ul className="used_skills">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JAVASCRIPT</li>
+                                    </ul>
+                                    <dl className="w3c">
+                                        <dt>웹 표준 준수</dt>
+                                        <dd> HTML/CSS W3C 웹 접근성 통과</dd>
+                                    </dl>
+                                    <dl className="technique_list">
+                                        <dt>주요 기술</dt>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                    </dl>
+                                    <ul className="link">
+                                        <li>사이트로 이동<a href="#"><FaHome /></a></li>
+                                        <li><a href="#"><FaGithub />깃허브로 이동</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            {/* 삼성엔지  */}
+                            {/* 씨제이 */}
+                            <li className="cj_one"> <div className="left">
+                                <div className="mockup"></div>
+                            </div>
+                                <div className="right">
+                                    <h2>삼성전기 클론 사이트</h2>
+                                    <ul className="used_skills">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JAVASCRIPT</li>
+                                    </ul>
+                                    <dl className="w3c">
+                                        <dt>웹 표준 준수</dt>
+                                        <dd> HTML/CSS W3C 웹 접근성 통과</dd>
+                                    </dl>
+                                    <dl className="technique_list">
+                                        <dt>주요 기술</dt>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                    </dl>
+                                    <ul className="link">
+                                        <li><a href="#"><FaHome /></a></li>
+                                        <li><a href="#"><FaGithub /></a></li>
+                                    </ul>
+                                </div></li>
+                            {/* 씨제이 */}
+                            {/* 카톡 */}
+                            <li className="kkotalk">
+                                <div className="left">
+                                    <div className="mockup"></div>
+                                </div>
+                                <div className="right">
+                                    <h2>삼성전기 클론 사이트</h2>
+                                    <ul className="used_skills">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JAVASCRIPT</li>
+                                    </ul>
+                                    <dl className="w3c">
+                                        <dt>웹 표준 준수</dt>
+                                        <dd> HTML/CSS W3C 웹 접근성 통과</dd>
+                                    </dl>
+                                    <dl className="technique_list">
+                                        <dt>주요 기술</dt>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                    </dl>
+                                    <ul className="link">
+                                        <li><a href="#"><FaHome /></a></li>
+                                        <li><a href="#"><FaGithub /></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            {/* 카톡 */}
+                            {/* 영화 */}
+                            <li className="movie">
+                                <div className="left">
+                                    <div className="mockup"></div>
+                                </div>
+                                <div className="right">
+                                    <h2>삼성전기 클론 사이트</h2>
+                                    <ul className="used_skills">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JAVASCRIPT</li>
+                                    </ul>
+                                    <dl className="w3c">
+                                        <dt>웹 표준 준수</dt>
+                                        <dd> HTML/CSS W3C 웹 접근성 통과</dd>
+                                    </dl>
+                                    <dl className="technique_list">
+                                        <dt>주요 기술</dt>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                        <dd>media query를 이용한 반응형 웹 페이지</dd>
+                                    </dl>
+                                    <ul className="link">
+                                        <li><a href="#"><FaHome /></a></li>
+                                        <li><a href="#"><FaGithub /></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            {/* 영화 */}

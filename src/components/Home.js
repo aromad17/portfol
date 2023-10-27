@@ -11,6 +11,7 @@ function Home({ checkHome, setCheckHome }) {
 
 
     setCheckHome(false);
+
     const textTime = setTimeout(() => {
         setAddClass(true);
     }, 0);
@@ -30,7 +31,7 @@ function Home({ checkHome, setCheckHome }) {
             const currentY = e.touches[0].clientY;
             const deltaY = currentY - startY;
 
-            if (deltaY > -30) {
+            if (deltaY > -50) {
                 console.log('Swipe Down');
             } else if (deltaY < -50) {
                 console.log(deltaY);
