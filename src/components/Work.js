@@ -9,11 +9,17 @@ function Work({ setCheckHome }) {
     const [num, setNum] = useState(0);
     const ulRef = useRef(null);
     const liRef = useRef(null);
+    const prevRef = useRef(null);
+    const nextRef = useRef(null);
+
+
 
     useEffect(() => {
 
         liRef.current = document.querySelectorAll(".work_list>ul>li");
         ulRef.current = document.querySelector(".work_list>ul");
+        prevRef.current = document.querySelector(".prev_btn");
+        nextRef.current = document.querySelector(".next_btn");
 
         liRef.current.forEach(item => {
             if (item.classList.contains("movie") || item.classList.contains("messanger")) {
@@ -21,11 +27,14 @@ function Work({ setCheckHome }) {
             }
         }
         )
+
+
     }, [])
 
 
 
     const prevClick = () => {
+        console.log(prevRef.current);
         setNum((prevNum) => {
             let newNum = prevNum + 1;
             if (newNum > 0) {
@@ -34,7 +43,6 @@ function Work({ setCheckHome }) {
             } else {
                 const ulWidth = ulRef.current.offsetWidth;
                 ulRef.current.style.opacity = 0;
-
                 setTimeout(() => {
                     ulRef.current.style.left = newNum * (ulWidth / 6) + "px";
                     setTimeout(() => {
@@ -49,6 +57,7 @@ function Work({ setCheckHome }) {
     }
 
     const nextClick = () => {
+        console.log(nextRef.current);
         setNum((prevNum) => {
             let newNum = prevNum - 1;
             if (newNum < -4) {
@@ -57,7 +66,6 @@ function Work({ setCheckHome }) {
             } else {
                 const ulWidth = ulRef.current.offsetWidth;
                 ulRef.current.style.opacity = 0;
-
                 setTimeout(() => {
                     ulRef.current.style.left = newNum * (ulWidth / 6) + "px";
                     setTimeout(() => {

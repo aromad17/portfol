@@ -1,0 +1,320 @@
+.contact {
+    position: relative;
+
+    .contact_inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 1440px;
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+
+        .contact_tit {
+            width: 100%;
+            margin: 30px 0 4vh;
+            text-transform: uppercase;
+            letter-spacing: .5em;
+            border-width: 4px 0;
+
+            h1 {
+                font: 600 10vh SCDream7;
+                letter-spacing: 0;
+                display: block;
+                margin: 0 auto;
+                text-shadow: 0 0 200px rgba(255, 255, 255, .5);
+                text-align: center;
+                background: url(../../public/img/animated-text-fill.png) repeat-y;
+                background-size: cover;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: aitf 80s linear infinite;
+                -webkit-transform: translate3d(0, 0, 0);
+                -webkit-backface-visibility: hidden;
+            }
+        }
+
+        .contact_con {
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+
+            >div {
+
+                width: 70%;
+                margin: 0 auto;
+
+                h2 {
+                    font-family: SCDream6;
+                    font-size: 5vh;
+                    line-height: 200%;
+                    margin: 10px 0 30px;
+
+                    svg {
+                        width: 4.5vh;
+                        height: 4.5vh;
+                        margin-right: 25px;
+                    }
+
+                    span {
+                        display: block;
+                        width: 100%;
+                        height: 0.3vh;
+                        background-color: #fff;
+
+                    }
+                }
+            }
+
+            .touch {
+
+
+                div {
+                    ul {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        gap: 8vh;
+
+                        li {
+                            margin-bottom: 20px;
+
+                            dl {
+                                dt {
+                                    font-family: SCDream5;
+                                    font-size: 3vh;
+                                    margin-bottom: 10px;
+                                }
+
+                                dd {
+                                    font-family: SDream4;
+                                    font-size: 2.5vh;
+
+                                    a {
+                                        svg {
+                                            width: 35px;
+                                            height: 35px;
+                                            color: #fff;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .mail {
+
+                padding-bottom: 50px;
+
+                form {
+                    width: 100%;
+
+                    .form_con {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 30px;
+
+                        label {
+                            width: 10vw;
+                            font-size: 3vh;
+                            margin-right: 30px;
+                        }
+
+                        .text_insert {
+                            width: 30vw;
+                            min-width: 200px;
+                            max-width: 1000px;
+                            height: 3vh;
+                        }
+
+                    }
+                }
+
+                .send_area {
+
+                    margin-bottom: 0 !important;
+
+                    label {
+                        align-self: flex-start;
+                    }
+
+                    textarea {
+                        align-items: start;
+                        width: 30vw;
+                        min-width: 200px;
+                        max-width: 1000px;
+                        height: 16vh;
+                        min-height: 150px;
+                        margin-right: 30px;
+                    }
+
+                    .send_btn {
+                        width: 80px;
+                        height: 80px;
+                        align-self: flex-end;
+                    }
+                }
+
+                .send_btn2 {
+                    display: none;
+                }
+
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width:830px) {
+    .contact {
+        position: relative;
+
+        .contact_inner {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            max-width: 1440px;
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+
+            .contact_tit {
+                width: 100%;
+                margin: 30px 0 4vh;
+                text-transform: uppercase;
+                letter-spacing: .5em;
+                border-width: 4px 0;
+
+                h1 {
+                    font: 600 8vh SCDream7;
+                    letter-spacing: 0;
+                    display: block;
+                    margin: 0 auto;
+                    text-shadow: 0 0 200px rgba(255, 255, 255, .5);
+                    text-align: center;
+                    background: url(../../public/img/animated-text-fill.png) repeat-y;
+                    background-size: cover;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: aitf 80s linear infinite;
+                    -webkit-transform: translate3d(0, 0, 0);
+                    -webkit-backface-visibility: hidden;
+                }
+            }
+
+            .contact_con {
+                >div {
+
+                    h2 {
+                        font-size: 3vh;
+
+                        svg {
+                            width: 3.2vh;
+                            height: 3.2vh;
+                            ;
+                        }
+
+                        span {}
+                    }
+                }
+
+                .touch {
+                    div {
+                        ul {
+                            gap: 4vh;
+
+                            li {
+
+                                dl {
+                                    dt {
+                                        font-size: 2vh;
+                                    }
+
+                                    dd {
+                                        font-size: 1.8vh;
+
+                                        a {
+                                            svg {
+                                                width: 1.8vh;
+                                                height: 1.8vh;
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .mail {
+
+                    padding-bottom: 80px;
+
+                    form {
+
+                        .form_con {
+
+                            label {
+                                width: 30%;
+                                margin-right: 15px;
+                                font-size: 2vh;
+                            }
+
+                            .text_insert {
+                                min-width: 60%;
+                            }
+
+                        }
+                    }
+
+                    .send_area {
+
+                        position: relative;
+
+                        label {
+                            width: 30%;
+                        }
+
+                        textarea {
+                            min-width: 60%;
+                            height: 180px;
+                            margin-right: 0;
+                        }
+
+                        .send_btn {
+                            width: 100%;
+                            display: none;
+                        }
+                    }
+
+                    .send_btn2 {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: block;
+                        width: 100px;
+                        height: 60px;
+                        margin: 20px auto 0;
+                    }
+
+                }
+
+            }
+
+        }
+    }
+}

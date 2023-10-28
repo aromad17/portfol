@@ -1,0 +1,256 @@
+.contact {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+.contact>.section_title {
+  width: 100%;
+  margin: 30px 0 4vh;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  border-width: 4px 0;
+}
+
+.contact>.section_title>h1 {
+  font: 600 10vh SCDream7;
+  letter-spacing: 0;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 200px rgba(255, 255, 255, .5);
+  text-align: center;
+  background: url(../../public/img/animated-text-fill.png) repeat-y;
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: aitf 80s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+
+.contact_wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  color: #e6e9de;
+}
+
+.contact h3 {
+  position: relative;
+  width: 100%;
+  font-size: 3rem;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  opacity: 1;
+  transition: all 0.8s linear 0s;
+}
+
+.contact h3 span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: #e6e9de;
+  transition: all 0.5s linear 0.5s;
+}
+
+.contact h3>svg {
+  width: 36px;
+  height: 36px;
+  margin-right: 20px;
+}
+
+.contact .touch {
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+}
+
+.contact .touch>div {
+  width: 100%;
+  overflow: hidden;
+}
+
+.contact .touch>div>ul {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  opacity: 1;
+  margin-top: 30px;
+  transition: transform 1s linear 0.8s, opacity 1s linear 1.3s;
+}
+
+.contact .touch>div>ul>li {
+  margin-right: 10%;
+}
+
+.contact .touch>div>ul>li>dl>dt {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.contact .touch>div>ul>li>dl>dd {
+  font-size: 2rem;
+}
+
+.contact .touch>div>ul>li>dl>dd>a {
+  color: #e6e9de;
+}
+
+.mail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+}
+
+.mail>div {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mail>div>form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 30px;
+  opacity: 1;
+  transition: transform 1s linear 0.8s, opacity 1.3s linear 1.3s;
+}
+
+.form_con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 35px;
+  margin-bottom: 30px;
+}
+
+.form_con:last-of-type {
+  align-items: start;
+}
+
+.form_con:last-of-type {
+  height: auto;
+  margin-bottom: 0;
+}
+
+.form_con>label {
+  width: 20%;
+  font-size: 2rem;
+}
+
+.form_con>input,
+.form_con>textarea {
+  width: 80%;
+  font-size: 1.5rem;
+}
+
+.form_con>input {
+  height: 100%;
+}
+
+
+
+.form_con>textarea {
+  height: 80px;
+  align-self: start;
+}
+
+.send_btn {
+  position: absolute;
+  bottom: 0;
+  left: 120%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  padding: 20px;
+  border: none;
+  color: #242226;
+  background: #D9D9D9;
+  cursor: pointer;
+}
+
+.send_btn:hover {
+  background: #242226;
+  color: #e6e9de;
+  border: 1px solid #e6e9de;
+}
+
+@media screen and (max-width:1200px) {
+
+  .contact h3 {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+  }
+
+  .contact .touch>ul>li>dl>dt {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .contact .touch>ul>li>dl>dd {}
+
+}
+
+@media screen and (max-width:845px) {
+  .contact_wrap {
+    width: 100%;
+    align-items: center;
+  }
+
+  .contact h3 {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  .contact .touch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    height: 100%;
+  }
+
+  .contact .touch ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact .touch ul>li {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .contact .touch>div>ul>li>dl>dt {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+  }
+
+  .contact .touch>div>ul>li>dl>dd {
+    font-size: 2.5rem;
+  }
+
+  .mail {
+    display: none;
+  }
+
+}
