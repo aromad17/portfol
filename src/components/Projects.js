@@ -12,6 +12,7 @@ function Projects({ name, className, skill, function1, homepage, github, videoUr
             <div className="left">
                 <div className="mockup">
                     <div className="video_box">
+
                         <video src={` ${process.env.PUBLIC_URL}${videoUrl}`} muted autoPlay loop playsInline />
                     </div>
                 </div>
