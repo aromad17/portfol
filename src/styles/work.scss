@@ -2,6 +2,9 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
+    background: linear-gradient(-45deg, #1e272e, #485460, #808e9b, #356C99, #D1FF36);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
 
     .work_inner {
         position: relative;
@@ -75,7 +78,7 @@
                         height: 100%;
                         border: 5px solid #fff;
                         border-radius: 20px;
-                        background-color: #485460;
+                        background-color: rgba(0, 0, 0, 0.4);
                         padding: 5vh;
                         box-sizing: border-box;
 
@@ -637,5 +640,20 @@
 
     100% {
         background-position: 100% 50%;
+    }
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }

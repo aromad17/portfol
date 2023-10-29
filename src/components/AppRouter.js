@@ -3,6 +3,7 @@ import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
 import Home from './Home'
 import About from './About'
 import Work from './Work'
+import Skill from './Skill'
 import Contact from './Contact'
 import Nav from './Nav'
 import Footer from './Footer'
@@ -27,6 +28,7 @@ function AppRouter({ checkHome, setCheckHome }) {
             <Route path="/" element={<Layout />}>
                 <Route path='/' index element={<Home checkHome={checkHome} setCheckHome={setCheckHome} />} />
                 <Route path='/about' element={<About checkHome={checkHome} setCheckHome={setCheckHome} />} />
+                <Route path='/skill' element={<Skill checkHome={checkHome} setCheckHome={setCheckHome} />} />
                 <Route path='/work' element={<Work checkHome={checkHome} setCheckHome={setCheckHome} />} />
                 <Route path='/contact' element={<Contact checkHome={checkHome} setCheckHome={setCheckHome} />} />
             </Route>

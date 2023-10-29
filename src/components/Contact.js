@@ -3,8 +3,11 @@ import '../styles/contact.scss';
 import { FaGithub } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+
 function Contact({ setCheckHome }) {
+
   setCheckHome(true);
+
   const [formData, setFormData] = useState({
     user_name: '',
     user_email: '',

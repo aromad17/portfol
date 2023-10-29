@@ -16,6 +16,8 @@ function Work({ setCheckHome }) {
 
     useEffect(() => {
 
+
+
         liRef.current = document.querySelectorAll(".work_list>ul>li");
         ulRef.current = document.querySelector(".work_list>ul");
         prevRef.current = document.querySelector(".prev_btn");
@@ -76,11 +78,12 @@ function Work({ setCheckHome }) {
     }
 
     window.addEventListener("resize", () => {
-        ulRef.current = document.querySelector(".work_list>ul");
-        const ulWidth = ulRef.current.offsetWidth;
-        ulRef.current.style.left = num * (ulWidth / 6) + "px";
-
-    })
+        if (ulRef.current) {
+            const ulWidth = ulRef.current.offsetWidth;
+            console.log(ulWidth);
+            ulRef.current.style.left = num * (ulWidth / 6) + "px";
+        }
+    });
 
     return (<>
         <div className="work">

@@ -60,8 +60,9 @@ function Nav({ checkHome }) {
             }>
                 <li onClick={() => onClick("")} onMouseEnter={() => onMouseEnter(0)} >home<FaHome /></li>
                 <li onClick={() => onClick("about")} onMouseEnter={() => onMouseEnter(1)}>about<FaUserAlt /></li>
-                <li onClick={() => onClick("work")} onMouseEnter={() => onMouseEnter(2)}>work<FaAlignJustify /></li>
-                <li onClick={() => onClick("contact")} onMouseEnter={() => onMouseEnter(3)}>contact<FaPhone /></li>
+                <li onClick={() => onClick("skill")} onMouseEnter={() => onMouseEnter(2)}>Skill<FaPhone /></li>
+                <li onClick={() => onClick("work")} onMouseEnter={() => onMouseEnter(3)}>work<FaAlignJustify /></li>
+                <li onClick={() => onClick("contact")} onMouseEnter={() => onMouseEnter(4)}>contact<FaPhone /></li>
             </ul>
         </div>
     );
