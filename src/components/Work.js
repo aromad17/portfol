@@ -82,7 +82,7 @@ function Work({ setCheckHome }) {
 
     })
 
-    return (
+    return (<>
         <div className="work">
             <div className="work_inner">
                 <div className="work_tit">
@@ -108,14 +108,20 @@ function Work({ setCheckHome }) {
 
                         </ul>
                     </div>
-                    <div className="list_control">
-                        <a className="prev_btn" onClick={prevClick}><FaArrowLeft /></a>
 
-                        <a className="next_btn" onClick={nextClick}><FaArrowRight /></a>
-                    </div>
                 </div>
             </div>
         </div >
+
+        <div className="list_control">
+            <a className="prev_btn" onClick={prevClick}><FaArrowLeft /></a>
+
+            <a className="next_btn" onClick={nextClick}><FaArrowRight /></a>
+        </div>
+    </>
+
+
+
     )
 
 }

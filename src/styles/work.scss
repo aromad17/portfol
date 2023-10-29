@@ -47,27 +47,7 @@
             padding-bottom: 80px;
 
 
-            .list_control {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 50px;
-                width: 100%;
-                margin-top: 50px;
-                text-align: center;
 
-                a {
-                    display: inline-block;
-                    cursor: pointer;
-
-                    * {
-                        width: 30px;
-                        height: 30px;
-                        stroke: #fff;
-                    }
-                }
-
-            }
 
             .work_list {
                 position: relative;
@@ -218,7 +198,7 @@
 
                                 h2 {
                                     font-family: SCDream5;
-                                    font-size: 3.5vh;
+                                    font-size: 6vh;
                                     line-height: 200%;
                                 }
 
@@ -402,6 +382,34 @@
     }
 }
 
+.list_control {
+    position: fixed;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    z-index: 50;
+
+    a {
+        display: inline-block;
+        cursor: pointer;
+
+        * {
+            width: 30px;
+            height: 30px;
+            stroke: #fff;
+        }
+    }
+
+}
+
+.footer {
+    display: none;
+}
 
 .work:-webkit-scrollbar {
     display: none;
@@ -409,6 +417,11 @@
 
 
 @media screen and (max-width:865px) {
+
+    .footer {
+        display: block;
+    }
+
     .work {
         width: 100vw;
 
