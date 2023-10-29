@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfol/static/css/main.13529b8b.css",
-    "main.js": "/portfol/static/js/main.9ac6a91e.js",
+    "main.css": "/portfol/static/css/main.5062e8e4.css",
+    "main.js": "/portfol/static/js/main.3ca50ea9.js",
     "static/media/SCDream7.otf": "/portfol/static/media/SCDream7.a8d826f4cafb0e728051.otf",
     "static/media/SCDream6.otf": "/portfol/static/media/SCDream6.4df12ee03e70b6326c25.otf",
     "static/media/SCDream1.otf": "/portfol/static/media/SCDream1.3f28bc17ecb809862c69.otf",
@@ -17,11 +17,11 @@
     "static/media/messanger.png": "/portfol/static/media/messanger.31d6361f5f9c4f67f114.png",
     "static/media/logo.svg": "/portfol/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/portfol/index.html",
-    "main.13529b8b.css.map": "/portfol/static/css/main.13529b8b.css.map",
-    "main.9ac6a91e.js.map": "/portfol/static/js/main.9ac6a91e.js.map"
+    "main.5062e8e4.css.map": "/portfol/static/css/main.5062e8e4.css.map",
+    "main.3ca50ea9.js.map": "/portfol/static/js/main.3ca50ea9.js.map"
   },
   "entrypoints": [
-    "static/css/main.13529b8b.css",
-    "static/js/main.9ac6a91e.js"
+    "static/css/main.5062e8e4.css",
+    "static/js/main.3ca50ea9.js"
   ]
 }
