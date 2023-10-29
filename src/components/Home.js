@@ -32,9 +32,7 @@ function Home({ checkHome, setCheckHome }) {
             const deltaY = currentY - startY;
 
             if (deltaY > -50) {
-                console.log('Swipe Down');
             } else if (deltaY < -50) {
-                console.log(deltaY);
                 navigate('/about');
             }
         }

@@ -34,7 +34,6 @@ function Work({ setCheckHome }) {
 
 
     const prevClick = () => {
-        console.log(prevRef.current);
         setNum((prevNum) => {
             let newNum = prevNum + 1;
             if (newNum > 0) {
@@ -49,7 +48,6 @@ function Work({ setCheckHome }) {
                         ulRef.current.style.opacity = 1;
                     }, 100);
                 }, 200)
-                console.log(newNum);
                 return newNum;
             }
 
@@ -57,7 +55,6 @@ function Work({ setCheckHome }) {
     }
 
     const nextClick = () => {
-        console.log(nextRef.current);
         setNum((prevNum) => {
             let newNum = prevNum - 1;
             if (newNum < -4) {
@@ -73,7 +70,6 @@ function Work({ setCheckHome }) {
                     }, 100);
                 }, 200)
             }
-            console.log(newNum);
             return newNum;
         });
 
