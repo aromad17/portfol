@@ -59,7 +59,6 @@ function Skill({ setCheckHome }) {
                 </div>
 
                 <div className='skill_con'>
-                    {/* <div className="skill_cover"></div> */}
                     <ul>
                         <li>
                             <div className="left">

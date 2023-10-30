@@ -134,6 +134,7 @@ function Work({ setCheckHome }) {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
         >
+
             <div className="work_inner">
                 <div className="work_tit">
                     <h1 className="on">WORK</h1>

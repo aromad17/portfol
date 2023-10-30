@@ -87,6 +87,7 @@ function Contact({ setCheckHome }) {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
+
       <div className='contact_inner'>
         <div className='contact_tit'>
           <h1 className='on'>Contact</h1>

@@ -129,6 +129,10 @@ function About({ checkHome, setCheckHome }) {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
         >
+            <div className="loader_wrap">
+                <div class="loader"></div>
+            </div>
+
             <div className="about_inner">
                 <div className="about_con">
                     <div className="left">
