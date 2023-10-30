@@ -15,7 +15,7 @@
         min-height: 100vh;
         background: rgba(130, 130, 130, 0.5);
         animation: loading .5s 1 forwards ease-in-out;
-        animation-delay: .5s;
+        animation-delay: .4s;
         animation-timing-function: cubic-bezier(0.63, 0, 0.42, 1.01);
         z-index: 99;
 
@@ -29,6 +29,7 @@
             background: #828282;
             border-top: 10px solid #ffa801;
             animation: loading .5s 1 forwards ease-in-out;
+            animation-delay: .3s;
             animation-timing-function: cubic-bezier(0.63, 0, 0.42, 1.01);
             z-index: 99;
         }
@@ -185,7 +186,6 @@
         align-items: center;
         width: 100vw;
         height: 100vh;
-        background: #1e272e;
         margin: 0 auto;
 
         .about_inner {
@@ -360,7 +360,6 @@
                     height: 60%;
                     z-index: 2;
                     margin: 0 auto;
-                    background-color: #1e272e;
                     padding-top: 50px;
 
                     .titleWrap,

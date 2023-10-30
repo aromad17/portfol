@@ -144,7 +144,7 @@ function Work({ setCheckHome }) {
                         <ul>
                             {project.Project.map((project) => (
                                 <Projects
-                                    key={project.id}
+                                    keyNum={project.id}
                                     name={project.name}
                                     className={project.class}
                                     skill={project.skill}
