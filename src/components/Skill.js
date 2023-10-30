@@ -1,14 +1,58 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import '../styles/skill.scss';
 import { FaRegCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Skill({ setCheckHome }) {
 
     setCheckHome(true);
+    const navigate = useNavigate();
+    const [startY, setStartY] = useState(null);
+
+    let isScrolling = true;
+    setTimeout(() => {
+        isScrolling = false;
+    }, 300);
+    const handleTouchStart = (e) => {
+        setStartY(e.touches[0].clientY);
+    };
+
+    const handleTouchEnd = () => {
+        setStartY(null);
+    };
+
+    const handleTouchMove = (e) => {
+        if (startY) {
+            const currentY = e.touches[0].clientY;
+            const deltaY = currentY - startY;
+
+            if (deltaY > -50 && window.scrollY <= 0) {
+                navigate('/about');
+            } else if (deltaY < -50 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                navigate('/work');
+            }
+        }
+    };
+
+    const handleWheel = (e) => {
+        if (isScrolling === false) {
+            if (e.deltaY < 0 && window.scrollY <= 0) {
+                console.log(e.deltaY)
+                navigate('/about');
+            } else if (e.deltaY > 0 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                navigate("/work")
+            }
+        }
+    };
 
     return (
 
-        <div className='skill'>
+        <div className='skill'
+            onWheel={handleWheel}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
             <div className='skill_inner'>
                 <div className='skill_tit'>
                     <h1 className='on'>SKILL</h1>

@@ -3,10 +3,56 @@ import '../styles/contact.scss';
 import { FaGithub } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 function Contact({ setCheckHome }) {
 
   setCheckHome(true);
+  const navigate = useNavigate();
+  const [startY, setStartY] = useState(null);
+
+  let isScrolling = true;
+  setTimeout(() => {
+    isScrolling = false;
+  }, 300);
+
+
+  const handleTouchStart = (e) => {
+    setStartY(e.touches[0].clientY);
+  };
+
+  const handleTouchEnd = () => {
+    setStartY(null);
+  };
+
+  const handleTouchMove = (e) => {
+    if (startY) {
+      const currentY = e.touches[0].clientY;
+      const deltaY = currentY - startY;
+
+      if (deltaY > -50 && window.scrollY <= 0) {
+        navigate('/work');
+      }
+    }
+  };
+
+  const handleWheel = (e) => {
+
+    if (isScrolling === false) {
+      if (e.deltaY < 0 && window.scrollY <= 0) {
+        console.log(e.deltaY)
+        navigate('/work');
+      }
+
+      setTimeout(() => {
+        isScrolling = false;
+      }, 1000); // 1초 동안 중복 호출 방지
+    };
+  }
+
+
+
+
 
   const [formData, setFormData] = useState({
     user_name: '',
@@ -37,7 +83,12 @@ function Contact({ setCheckHome }) {
 
   return (
 
-    <div className='contact'>
+    <div className='contact'
+      onWheel={handleWheel}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className='contact_inner'>
         <div className='contact_tit'>
           <h1 className='on'>Contact</h1>

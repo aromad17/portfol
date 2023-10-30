@@ -8,7 +8,7 @@ function Home({ checkHome, setCheckHome }) {
     const [addClass, setAddClass] = useState(false);
     const [homePosition, setHomePosition] = useState(false);
     const [startY, setStartY] = useState(null);
-
+    let isScrolling = false;
 
     setCheckHome(false);
 
@@ -32,7 +32,7 @@ function Home({ checkHome, setCheckHome }) {
             const deltaY = currentY - startY;
 
             if (deltaY > -50) {
-            } else if (deltaY < -50) {
+            } else if (deltaY < -50 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
                 navigate('/about');
             }
         }
@@ -40,7 +40,6 @@ function Home({ checkHome, setCheckHome }) {
 
     window.addEventListener("scroll", () => {
 
-        console.log(window.scrollX, window.scrollY);
         let scrollTop = window.scrollY;
         if (scrollTop > 100) {
             setHomePosition(true);
@@ -48,10 +47,12 @@ function Home({ checkHome, setCheckHome }) {
     })
 
     const handleWheel = (e) => {
+
         if (e.deltaY > 0) {
             navigate('/about');
-            setCheckHome(true);
         }
+
+
     };
 
 

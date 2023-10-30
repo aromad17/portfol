@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { FaHome, FaUserAlt, FaPhone, FaAlignJustify } from "react-icons/fa";
+import { FaHome, FaUserAlt, FaPhone, FaAlignJustify, FaChartBar } from "react-icons/fa";
 import "../styles/nav.scss"
 import { useNavigate } from 'react-router-dom';
 
@@ -35,20 +35,17 @@ function Nav({ checkHome }) {
 
     }
 
-    useEffect(() => {
-
-        window.addEventListener('scroll', () => {
-
-            const scrollPosition = window.scrollY;
-            let nav = document.querySelector(".nav")
-            if (scrollPosition > 10) {
-                nav.classList.add("on");
-            } else {
-                nav.classList.remove("on");
-            }
-        });
-
-    }, []);
+    // useEffect(() => {
+    //     window.addEventListener('scroll', () => {
+    //         const scrollPosition = window.scrollY;
+    //         let nav = document.querySelector(".nav")
+    //         if (scrollPosition > 10) {
+    //             nav.classList.add("on");
+    //         } else {
+    //             nav.classList.remove("on");
+    //         }
+    //     });
+    // }, []);
 
     return (
         <div className={`${checkHome ? 'nav' : 'noNav'}`}>
@@ -60,7 +57,7 @@ function Nav({ checkHome }) {
             }>
                 <li onClick={() => onClick("")} onMouseEnter={() => onMouseEnter(0)} >home<FaHome /></li>
                 <li onClick={() => onClick("about")} onMouseEnter={() => onMouseEnter(1)}>about<FaUserAlt /></li>
-                <li onClick={() => onClick("skill")} onMouseEnter={() => onMouseEnter(2)}>Skill<FaPhone /></li>
+                <li onClick={() => onClick("skill")} onMouseEnter={() => onMouseEnter(2)}>Skill<FaChartBar /></li>
                 <li onClick={() => onClick("work")} onMouseEnter={() => onMouseEnter(3)}>work<FaAlignJustify /></li>
                 <li onClick={() => onClick("contact")} onMouseEnter={() => onMouseEnter(4)}>contact<FaPhone /></li>
             </ul>

@@ -3,6 +3,7 @@ import '../styles/work.scss';
 import { FaHome, FaGithub, FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import project from '../data/project.json';
 import Projects from "./Projects";
+import { useNavigate } from "react-router-dom";
 
 function Work({ setCheckHome }) {
     setCheckHome(true);
@@ -11,12 +12,53 @@ function Work({ setCheckHome }) {
     const liRef = useRef(null);
     const prevRef = useRef(null);
     const nextRef = useRef(null);
+    const navigate = useNavigate();
+    const [startY, setStartY] = useState(null);
 
+    let isScrolling = true;
+    setTimeout(() => {
+        isScrolling = false;
+    }, 300);
+
+    const handleTouchStart = (e) => {
+        setStartY(e.touches[0].clientY);
+    };
+
+    const handleTouchEnd = () => {
+        setStartY(null);
+    };
+
+    const handleTouchMove = (e) => {
+        if (startY) {
+            const currentY = e.touches[0].clientY;
+            const deltaY = currentY - startY;
+
+            if (deltaY > -50 && window.scrollY <= 0) {
+                navigate('/skill');
+            } else if (deltaY < -50) {
+                navigate('/contact');
+            }
+        }
+    };
+
+    const handleWheel = (e) => {
+
+        if (isScrolling === false) {
+            if (e.deltaY < 0 && window.scrollY <= 0) {
+                isScrolling = true;
+                navigate('/skill');
+            } else if (e.deltaY > 0 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                isScrolling = true;
+                navigate('/contact');
+            }
+        }
+
+
+
+    };
 
 
     useEffect(() => {
-
-
 
         liRef.current = document.querySelectorAll(".work_list>ul>li");
         ulRef.current = document.querySelector(".work_list>ul");
@@ -86,7 +128,12 @@ function Work({ setCheckHome }) {
     });
 
     return (<>
-        <div className="work">
+        <div className="work"
+            onWheel={handleWheel}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
             <div className="work_inner">
                 <div className="work_tit">
                     <h1 className="on">WORK</h1>

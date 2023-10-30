@@ -1,11 +1,48 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import '../styles/about.scss';
+import { useNavigate } from 'react-router-dom';
 
 
 
-function About({ checkHome, setCheckHome, handleWheel }) {
+function About({ checkHome, setCheckHome }) {
+    const navigate = useNavigate();
+    const [startY, setStartY] = useState(null);
+    let isScrolling = true;
+    setTimeout(() => {
+        isScrolling = false;
+    }, 300);
 
     setCheckHome(true);
+
+    const handleTouchStart = (e) => {
+        setStartY(e.touches[0].clientY);
+    };
+
+    const handleTouchEnd = () => {
+        setStartY(null);
+    };
+
+    const handleTouchMove = (e) => {
+        if (startY) {
+            const currentY = e.touches[0].clientY;
+            const deltaY = currentY - startY;
+
+            if (deltaY > -50) {
+            } else if (deltaY < -50 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                navigate('/skill');
+            }
+        }
+    };
+
+    const handleWheel = (e) => {
+
+        if (isScrolling === false) {
+            if (e.deltaY > 0) {
+                navigate('/skill');
+            }
+        }
+
+    }
 
     useEffect(() => {
         class TextScramble {
@@ -14,6 +51,7 @@ function About({ checkHome, setCheckHome, handleWheel }) {
                 this.chars = '!<>-_\]{—=+*?#_'
                 this.update = this.update.bind(this)
             }
+
             setText(newText) {
                 const oldText = this.el.innerText
                 const length = Math.max(oldText.length, newText.length)
@@ -31,6 +69,7 @@ function About({ checkHome, setCheckHome, handleWheel }) {
                 this.update()
                 return promise
             }
+
             update() {
                 let output = ''
                 let complete = 0
@@ -85,7 +124,12 @@ function About({ checkHome, setCheckHome, handleWheel }) {
 
 
     return (
-        <div className="about">
+        <div className="about"
+            onWheel={handleWheel}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
             <div className="about_inner">
                 <div className="about_con">
                     <div className="left">
