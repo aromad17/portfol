@@ -385,6 +385,11 @@
     }
 }
 
+.footer {
+    display: none;
+}
+
+
 .list_control {
     position: fixed;
     bottom: 10px;
@@ -408,10 +413,6 @@
         }
     }
 
-}
-
-.footer {
-    display: none;
 }
 
 .work:-webkit-scrollbar {

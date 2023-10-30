@@ -42,7 +42,7 @@ function Skill({ setCheckHome }) {
                                     <dt>집요한 CSS 스타일링</dt>
                                     <dd><FaRegCircle /> 다양한 CSS 속성과 선택자를 활용하여 웹 페이지 디자인을 구축하고 스타일링</dd>
                                     <dd><FaRegCircle /> 미디어 쿼리를 활용하여 모바일 및 데스크탑에 맞는 반응형 디자인을 개발합니다.</dd>
-                                    <dd><FaRegCircle /> CSS 프레임워크를 적용하여 효율적인 웹 디자인을 구현 가능합니다.</dd>
+                                    <dd><FaRegCircle /> 조금의 오차도 보면 견딜 수가 없습니다.</dd>
 
                                 </dl>
                             </div>
