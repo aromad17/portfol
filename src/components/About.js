@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import '../styles/about.scss';
 import { useNavigate } from 'react-router-dom';
 
+function About({ setCheckHome }) {
 
+    useEffect(() => {
 
-function About({ checkHome, setCheckHome }) {
-    setCheckHome(true);
+        setCheckHome(true);
+    }, [])
+
     const navigate = useNavigate();
     const [startY, setStartY] = useState(null);
     let isScrolling = true;
@@ -130,7 +133,7 @@ function About({ checkHome, setCheckHome }) {
             onTouchEnd={handleTouchEnd}
         >
             <div className="loader_wrap">
-                <div class="loader"></div>
+                <div className="loader"></div>
             </div>
 
             <div className="about_inner">

@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import { FaHome, FaGithub } from "react-icons/fa";
 
-function Projects({ name, className, skill, function1, homepage, github, videoUrl, key }) {
+function Projects({ name, className, skill, function1, homepage, github, videoUrl, keyNum }) {
 
 
 
 
     return (
 
-        <li className={className} key={key}>
+        <li className={className} key={keyNum}>
             <div className="left">
                 <div className="mockup">
                     <div className="video_box">
@@ -29,8 +29,8 @@ function Projects({ name, className, skill, function1, homepage, github, videoUr
                 <div className="project_tit">
                     <h2>{name}</h2>
                     <ul className="used_skills">
-                        {skill.map((skill, idx) =>
-                            <li key={idx}>{skill}</li>
+                        {skill.map((item, idx) =>
+                            <li key={idx}>{item}</li>
                         )}
                     </ul>
                 </div>
@@ -39,8 +39,8 @@ function Projects({ name, className, skill, function1, homepage, github, videoUr
 
                 <dl className="technique_list">
                     <dt>주요 기술</dt>
-                    {function1.map((function1, idx) =>
-                        <dd key={idx}>🤍&nbsp;&nbsp;{function1}</dd>
+                    {function1.map((item, idx) =>
+                        <dd key={idx}>🤍&nbsp;&nbsp;{item}</dd>
                     )}
                 </dl>
 

@@ -7,7 +7,6 @@ function Nav({ checkHome }) {
 
     const navigate = useNavigate();
     const liRef = useRef(null);
-    const iconRef = useRef(null);
     const [iconClick, setIconClick] = useState(false)
     const [hamClick, setHamClick] = useState(false);
 

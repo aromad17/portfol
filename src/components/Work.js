@@ -6,7 +6,6 @@ import Projects from "./Projects";
 import { useNavigate } from "react-router-dom";
 
 function Work({ setCheckHome }) {
-    setCheckHome(true);
     const [num, setNum] = useState(0);
     const ulRef = useRef(null);
     const liRef = useRef(null);
@@ -59,6 +58,7 @@ function Work({ setCheckHome }) {
 
 
     useEffect(() => {
+        setCheckHome(true);
 
         liRef.current = document.querySelectorAll(".work_list>ul>li");
         ulRef.current = document.querySelector(".work_list>ul");
@@ -122,7 +122,6 @@ function Work({ setCheckHome }) {
     window.addEventListener("resize", () => {
         if (ulRef.current) {
             const ulWidth = ulRef.current.offsetWidth;
-            console.log(ulWidth);
             ulRef.current.style.left = num * (ulWidth / 6) + "px";
         }
     });
@@ -143,9 +142,9 @@ function Work({ setCheckHome }) {
 
                     <div className="work_list">
                         <ul>
-                            {project.Project.map((project, idx) => (
+                            {project.Project.map((project) => (
                                 <Projects
-                                    key={idx}
+                                    key={project.id}
                                     name={project.name}
                                     className={project.class}
                                     skill={project.skill}
