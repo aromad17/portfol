@@ -3,6 +3,7 @@ import "../styles/home.scss"
 import { useNavigate } from 'react-router-dom';
 
 function Home({ checkHome, setCheckHome }) {
+    setCheckHome(false);
     const navigate = useNavigate();
     const [checkWidth, setCheckWidth] = useState(false);
     const [addClass, setAddClass] = useState(false);
@@ -10,7 +11,6 @@ function Home({ checkHome, setCheckHome }) {
     const [startY, setStartY] = useState(null);
     let isScrolling = false;
 
-    setCheckHome(false);
 
     const textTime = setTimeout(() => {
         setAddClass(true);
@@ -37,14 +37,6 @@ function Home({ checkHome, setCheckHome }) {
             }
         }
     };
-
-    window.addEventListener("scroll", () => {
-
-        let scrollTop = window.scrollY;
-        if (scrollTop > 100) {
-            setHomePosition(true);
-        }
-    })
 
     const handleWheel = (e) => {
 

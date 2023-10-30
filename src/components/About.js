@@ -5,14 +5,13 @@ import { useNavigate } from 'react-router-dom';
 
 
 function About({ checkHome, setCheckHome }) {
+    setCheckHome(true);
     const navigate = useNavigate();
     const [startY, setStartY] = useState(null);
     let isScrolling = true;
     setTimeout(() => {
         isScrolling = false;
     }, 300);
-
-    setCheckHome(true);
 
     const handleTouchStart = (e) => {
         setStartY(e.touches[0].clientY);
@@ -37,7 +36,7 @@ function About({ checkHome, setCheckHome }) {
     const handleWheel = (e) => {
 
         if (isScrolling === false) {
-            if (e.deltaY > 0) {
+            if (e.deltaY > 0 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
                 navigate('/skill');
             }
         }
@@ -159,7 +158,7 @@ function About({ checkHome, setCheckHome }) {
                         </div>
 
                         <div className="info">
-                            <h2 className="infoTit">Info</h2>
+                            <h2 className="infoTit">My <span>Info</span></h2>
                             <ul>
                                 <li>이름 &nbsp;:&nbsp; <span>이상현</span></li>
                                 <li>생년월일 &nbsp;:&nbsp; <span>11.17.1993</span></li>

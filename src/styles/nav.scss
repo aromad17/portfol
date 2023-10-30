@@ -1,7 +1,3 @@
-.noNav {
-    display: none;
-}
-
 .nav {
     position: fixed;
     top: 50%;
@@ -90,8 +86,8 @@
     }
 }
 
-.nav.on {
-    opacity: 1;
+.noNav {
+    display: none;
 }
 
 @keyframes navAppear {

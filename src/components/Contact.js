@@ -6,7 +6,6 @@ import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
 function Contact({ setCheckHome }) {
-
   setCheckHome(true);
   const navigate = useNavigate();
   const [startY, setStartY] = useState(null);
@@ -40,7 +39,6 @@ function Contact({ setCheckHome }) {
 
     if (isScrolling === false) {
       if (e.deltaY < 0 && window.scrollY <= 0) {
-        console.log(e.deltaY)
         navigate('/work');
       }
 
