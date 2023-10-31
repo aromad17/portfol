@@ -13,6 +13,7 @@ function Skill({ setCheckHome }) {
     setTimeout(() => {
         isScrolling = false;
     }, 300);
+
     const handleTouchStart = (e) => {
         setStartY(e.touches[0].clientY);
     };

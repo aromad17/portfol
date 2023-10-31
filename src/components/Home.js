@@ -32,6 +32,7 @@ function Home({ checkHome, setCheckHome }) {
             const deltaY = currentY - startY;
 
             if (deltaY > -50) {
+                return null;
             } else if (deltaY < -50 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
                 navigate('/about');
             }
@@ -40,7 +41,7 @@ function Home({ checkHome, setCheckHome }) {
 
     const handleWheel = (e) => {
 
-        if (e.deltaY > 0) {
+        if (e.deltaY > 0 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
             navigate('/about');
         }
 

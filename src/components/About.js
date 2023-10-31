@@ -11,6 +11,7 @@ function About({ setCheckHome }) {
 
     const navigate = useNavigate();
     const [startY, setStartY] = useState(null);
+
     let isScrolling = true;
     setTimeout(() => {
         isScrolling = false;
@@ -37,9 +38,8 @@ function About({ setCheckHome }) {
     };
 
     const handleWheel = (e) => {
-
         if (isScrolling === false) {
-            if (e.deltaY > 0 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            if (e.deltaY > 50 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
                 navigate('/skill');
             }
         }

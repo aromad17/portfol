@@ -46,7 +46,7 @@ function Work({ setCheckHome }) {
             if (e.deltaY < 0 && window.scrollY <= 0) {
                 isScrolling = true;
                 navigate('/skill');
-            } else if (e.deltaY > 0 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            } else if (e.deltaY > 50 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
                 isScrolling = true;
                 navigate('/contact');
             }
