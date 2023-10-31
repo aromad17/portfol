@@ -432,6 +432,7 @@
     a {
         display: inline-block;
         cursor: pointer;
+        transition: opacity 0.5s linear 0s;
 
         * {
             width: 45px;
