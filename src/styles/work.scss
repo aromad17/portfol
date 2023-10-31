@@ -127,7 +127,7 @@
 
                                 .video_box {
                                     position: absolute;
-                                    top: 130%;
+                                    top: 0%;
                                     left: 50%;
                                     transform: translate(-50%, 0%);
                                     width: 100%;
@@ -169,7 +169,6 @@
 
                             .mockup:hover {
                                 .video_box {
-                                    top: 0;
                                     opacity: 1;
                                 }
                             }
@@ -535,7 +534,6 @@
                                     .video_box {
                                         video {
                                             min-width: 100%;
-
                                         }
                                     }
 
