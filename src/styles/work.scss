@@ -419,7 +419,7 @@
 
 .list_control {
     position: fixed;
-    bottom: 10px;
+    bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -434,9 +434,9 @@
         cursor: pointer;
 
         * {
-            width: 30px;
-            height: 30px;
-            stroke: #fff;
+            width: 45px;
+            height: 45px;
+            color: #ffa801;
         }
     }
 

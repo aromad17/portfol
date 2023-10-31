@@ -62,8 +62,6 @@ function Work({ setCheckHome }) {
 
         liRef.current = document.querySelectorAll(".work_list>ul>li");
         ulRef.current = document.querySelector(".work_list>ul");
-        prevRef.current = document.querySelector(".prev_btn");
-        nextRef.current = document.querySelector(".next_btn");
 
         liRef.current.forEach(item => {
             if (item.classList.contains("movie") || item.classList.contains("messanger")) {
@@ -72,6 +70,12 @@ function Work({ setCheckHome }) {
         }
         )
 
+        prevRef.current = document.querySelector(".prev_btn");
+        nextRef.current = document.querySelector(".next_btn");
+
+        if (num === 0) {
+            prevRef.current.style.opacity = 0;
+        }
 
     }, [])
 
@@ -80,6 +84,12 @@ function Work({ setCheckHome }) {
     const prevClick = () => {
         setNum((prevNum) => {
             let newNum = prevNum + 1;
+            if (newNum === 0) {
+                prevRef.current.style.opacity = 0;
+            } else {
+                prevRef.current.style.opacity = 1;
+                nextRef.current.style.opacity = 1;
+            }
             if (newNum > 0) {
                 newNum = 0;
                 return newNum;
@@ -99,13 +109,26 @@ function Work({ setCheckHome }) {
     }
 
     const nextClick = () => {
+        prevRef.current.style.opacity = "block";
         setNum((prevNum) => {
             let newNum = prevNum - 1;
+
+            if (newNum === -4) {
+                nextRef.current.style.opacity = 0;
+            } else {
+                prevRef.current.style.opacity = 1;
+                nextRef.current.style.opacity = 1;
+            }
+
             if (newNum < -4) {
+
                 newNum = -4;
+
                 return newNum;
             } else {
+
                 const ulWidth = ulRef.current.offsetWidth;
+
                 ulRef.current.style.opacity = 0;
                 setTimeout(() => {
                     ulRef.current.style.left = newNum * (ulWidth / 6) + "px";
@@ -114,6 +137,7 @@ function Work({ setCheckHome }) {
                     }, 100);
                 }, 200)
             }
+
             return newNum;
         });
 
