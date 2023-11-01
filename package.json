@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build & shx cp build/indexhtml build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -45,7 +45,8 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.69.4"
+    "sass": "^1.69.4",
+    "shx": "^0.3.4"
   },
   "homepage": "https://shportfolio.sanghyeonzzang.com/"
 }
