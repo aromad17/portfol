@@ -11,8 +11,8 @@ import Footer from './Footer'
 
 const Layout = () => {
 
-    const [checkHome, setCheckHome] = useState(false);
 
+    const [checkHome, setCheckHome] = useState(false);
     return (
         <div>
 

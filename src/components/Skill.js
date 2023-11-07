@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../styles/skill.scss';
 import { FaRegCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 function Skill({ setCheckHome }) {
 
-    setCheckHome(true);
     const navigate = useNavigate();
     const [startY, setStartY] = useState(null);
+
+    useEffect(() => {
+
+        setCheckHome(true);
+    })
 
     let isScrolling = true;
     setTimeout(() => {

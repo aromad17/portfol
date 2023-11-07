@@ -78,7 +78,7 @@ function Work({ setCheckHome }) {
         nextRef.current = document.querySelector(".next_btn");
 
         if (num === 0) {
-            prevRef.current.style.opacity = 0;
+            prevRef.current.style.display = "none";
         }
 
 
@@ -90,10 +90,10 @@ function Work({ setCheckHome }) {
         setNum((prevNum) => {
             let newNum = prevNum + 1;
             if (newNum === 0) {
-                prevRef.current.style.opacity = 0;
+                prevRef.current.style.display = "none";
             } else {
-                prevRef.current.style.opacity = 1;
-                nextRef.current.style.opacity = 1;
+                prevRef.current.style.display = "block";
+                nextRef.current.style.display = "block";
             }
             if (newNum > 0) {
                 newNum = 0;
@@ -119,10 +119,10 @@ function Work({ setCheckHome }) {
             let newNum = prevNum - 1;
 
             if (newNum === -4) {
-                nextRef.current.style.opacity = 0;
+                nextRef.current.style.display = "none";
             } else {
-                prevRef.current.style.opacity = 1;
-                nextRef.current.style.opacity = 1;
+                prevRef.current.style.display = "block";
+                nextRef.current.style.display = "block";
             }
 
             if (newNum < -4) {
@@ -175,9 +175,9 @@ function Work({ setCheckHome }) {
 
                     <div className="work_list">
                         <ul>
-                            {project.Project.map((project) => (
+                            {project.Project.map((project, idx) => (
                                 <Projects
-                                    keyNum={project.id}
+                                    key={idx}
                                     name={project.name}
                                     className={project.class}
                                     skill={project.skill}
@@ -185,7 +185,7 @@ function Work({ setCheckHome }) {
                                     homepage={project.page_link}
                                     github={project.github_link}
                                     videoUrl={project.video_url}
-                                    IosVideoUrl={project.ios_video_url}
+                                    iosVideoUrl={project.ios_video_url}
                                     setIsClicked={setIsClicked}
                                     setWorkName={setWorkName}
                                 />

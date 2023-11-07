@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaHome, FaGithub } from "react-icons/fa";
 
-function Projects({ setIsClicked, setWorkName, name, className, skill, function1, homepage, github, videoUrl, iosVideoUrl, keyNum }) {
+function Projects({ setIsClicked, setWorkName, keyNum, name, className, skill, function1, homepage, github, videoUrl, iosVideoUrl }) {
 
     const mockupRef = useRef(null);
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
 
     useEffect(() => {
         mockupRef.current = document.querySelectorAll(".mockup");
