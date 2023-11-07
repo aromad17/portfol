@@ -193,8 +193,15 @@
                                         border-radius: 5px;
                                         font-family: SCDream4;
                                         font-size: 10px;
+
+
                                     }
 
+                                    li:last-child:hover {
+                                        background: #fff;
+                                        color: #485460;
+                                        cursor: pointer;
+                                    }
 
                                 }
 
@@ -208,6 +215,8 @@
                             .w3c.noW3c ul li:last-child {
                                 display: none;
                             }
+
+
                         }
 
                         .right {

@@ -3,6 +3,7 @@ import '../styles/work.scss';
 import { FaHome, FaGithub, FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import project from '../data/project.json';
 import Projects from "./Projects";
+import Accessibility from "./Accessibility";
 import { useNavigate } from "react-router-dom";
 
 function Work({ setCheckHome }) {
@@ -13,6 +14,9 @@ function Work({ setCheckHome }) {
     const nextRef = useRef(null);
     const navigate = useNavigate();
     const [startY, setStartY] = useState(null);
+    const [isClicked, setIsClicked] = useState(false);
+    const [workName, setWorkName] = useState('');
+
 
     let isScrolling = true;
     setTimeout(() => {
@@ -157,7 +161,11 @@ function Work({ setCheckHome }) {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
         >
-
+            {isClicked ?
+                <Accessibility workName={workName} setWorkName={setWorkName} setIsClicked={setIsClicked} />
+                :
+                <></>
+            }
             <div className="work_inner">
                 <div className="work_tit">
                     <h1 className="on">WORK</h1>
@@ -176,6 +184,8 @@ function Work({ setCheckHome }) {
                                     homepage={project.page_link}
                                     github={project.github_link}
                                     videoUrl={project.video_url}
+                                    setIsClicked={setIsClicked}
+                                    setWorkName={setWorkName}
                                 />
                             ))}
 

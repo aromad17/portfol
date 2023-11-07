@@ -1,19 +1,37 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaHome, FaGithub } from "react-icons/fa";
 
-function Projects({ name, className, skill, function1, homepage, github, videoUrl, keyNum }) {
+function Projects({ setIsClicked, setWorkName, name, className, skill, function1, homepage, github, videoUrl, keyNum }) {
 
-    const mockup = document.querySelector(".mockup");
+    const mockupRef = useRef(null);
+
+    useEffect(() => {
+        mockupRef.current = document.querySelectorAll(".mockup");
+        const mockupArray = Array.from(mockupRef.current);
+    }, [])
 
     const mockupEnter = (e) => {
         e.preventDefault();
-        mockup.classList.add("on");
+
+        mockupRef.current.forEach(item => {
+            item.classList.add("on");
+        });
     }
 
     const mockupLeave = (e) => {
+
         e.preventDefault();
-        mockup.classList.remove("on");
+        mockupRef.current.forEach(item => {
+            item.classList.remove("on");
+        });
+
     }
+
+    const w3c = (work) => {
+        setIsClicked(true);
+        setWorkName(work);
+    }
+
 
     return (
 
@@ -34,7 +52,9 @@ function Projects({ name, className, skill, function1, homepage, github, videoUr
                     <ul>
 
                         <li>기여도 100%</li>
-                        <li>W3C 웹 접근성 통과</li>
+                        <li onClick={() => {
+                            w3c({ className })
+                        }}>W3C 웹 접근성 검사 결과 보기</li>
                     </ul>
                 </div>
             </div>
