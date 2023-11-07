@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5d2d395b.css",
-    "main.js": "/static/js/main.901510a1.js",
+    "main.css": "/static/css/main.bc938c71.css",
+    "main.js": "/static/js/main.35819217.js",
     "static/media/SCDream7.otf": "/static/media/SCDream7.a8d826f4cafb0e728051.otf",
     "static/media/SCDream6.otf": "/static/media/SCDream6.4df12ee03e70b6326c25.otf",
     "static/media/SCDream1.otf": "/static/media/SCDream1.3f28bc17ecb809862c69.otf",
@@ -16,11 +16,11 @@
     "static/media/cj.png": "/static/media/cj.b77ad34570b87f457622.png",
     "static/media/messanger.png": "/static/media/messanger.31d6361f5f9c4f67f114.png",
     "index.html": "/index.html",
-    "main.5d2d395b.css.map": "/static/css/main.5d2d395b.css.map",
-    "main.901510a1.js.map": "/static/js/main.901510a1.js.map"
+    "main.bc938c71.css.map": "/static/css/main.bc938c71.css.map",
+    "main.35819217.js.map": "/static/js/main.35819217.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d2d395b.css",
-    "static/js/main.901510a1.js"
+    "static/css/main.bc938c71.css",
+    "static/js/main.35819217.js"
   ]
 }
