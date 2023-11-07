@@ -81,6 +81,7 @@ function Work({ setCheckHome }) {
             prevRef.current.style.opacity = 0;
         }
 
+
     }, [])
 
 
@@ -184,6 +185,7 @@ function Work({ setCheckHome }) {
                                     homepage={project.page_link}
                                     github={project.github_link}
                                     videoUrl={project.video_url}
+                                    IosVideoUrl={project.ios_video_url}
                                     setIsClicked={setIsClicked}
                                     setWorkName={setWorkName}
                                 />

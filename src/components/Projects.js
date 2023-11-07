@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaHome, FaGithub } from "react-icons/fa";
 
-function Projects({ setIsClicked, setWorkName, name, className, skill, function1, homepage, github, videoUrl, keyNum }) {
+function Projects({ setIsClicked, setWorkName, name, className, skill, function1, homepage, github, videoUrl, iosVideoUrl, keyNum }) {
 
     const mockupRef = useRef(null);
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
     useEffect(() => {
         mockupRef.current = document.querySelectorAll(".mockup");
@@ -44,7 +45,15 @@ function Projects({ setIsClicked, setWorkName, name, className, skill, function1
                 >
                     <div className="video_box">
 
-                        <video src={` ${process.env.PUBLIC_URL}${videoUrl}`} muted autoPlay loop playsInline />
+                        <video muted autoPlay loop playsInline>
+                            {isIOS ?
+                                <source src={` ${process.env.PUBLIC_URL}${iosVideoUrl}`} />
+                                :
+                                <source src={` ${process.env.PUBLIC_URL}${videoUrl}`} />
+                            }
+
+                        </video>
+
                     </div>
                 </div>
 

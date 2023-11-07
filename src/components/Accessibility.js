@@ -7,8 +7,6 @@ function Accessibility({ workName, setWorkName, setIsClicked }) {
     setWorkName('');
   }
 
-  console.log(workName.className)
-
   return (
     <div className='access'>
       <div className='close_access' onClick={() => { onCloseClick() }}>

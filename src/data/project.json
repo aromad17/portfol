@@ -18,7 +18,8 @@
             ],
             "page_link": "http://ss_electric.sanghyeonzzang.com/",
             "github_link": "https://github.com/aromad17/samsung-electric_clone",
-            "video_url": "/img/ss_elec.webm"
+            "video_url": "/img/ss_elec.webm",
+            "ios_video_url": "/img/ss_elec.mov"
         },
         {
             "id": 2,
@@ -39,7 +40,8 @@
             ],
             "page_link": "http://ss_engineering.sanghyeonzzang.com/",
             "github_link": "https://github.com/aromad17/samsung-engineering_clone",
-            "video_url": "/img/ss_engi.mp4"
+            "video_url": "/img/ss_engi.mp4",
+            "ios_video_url": "/img/ss_engi.mov"
         },
         {
             "id": 3,
@@ -58,7 +60,8 @@
             ],
             "page_link": "http://cjoneee.sanghyeonzzang.com/",
             "github_link": "https://github.com/aromad17/cjone_clone",
-            "video_url": "/img/cjone.webm"
+            "video_url": "/img/cjone.webm",
+            "ios_video_url": "/img/cjone.mov"
         },
         {
             "id": 4,
@@ -81,7 +84,8 @@
             ],
             "page_link": "https://kkotalk.sanghyeonzzang.com/",
             "github_link": "https://github.com/aromad17/kkotalk",
-            "video_url": "/img/messanger.webm"
+            "video_url": "/img/messanger.webm",
+            "ios_video_url": "/img/messanger.mov"
         },
         {
             "id": 5,
@@ -105,7 +109,8 @@
             ],
             "page_link": "https://movieflix.sanghyeonzzang.com/",
             "github_link": "https://github.com/aromad17/netflix",
-            "video_url": "/img/movie.mp4"
+            "video_url": "/img/movie.mp4",
+            "ios_video_url": "/img/movie.mov"
         }
     ]
 }
