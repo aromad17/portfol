@@ -3,14 +3,27 @@ import { FaHome, FaGithub } from "react-icons/fa";
 
 function Projects({ name, className, skill, function1, homepage, github, videoUrl, keyNum }) {
 
+    const mockup = document.querySelector(".mockup");
 
+    const mockupEnter = (e) => {
+        e.preventDefault();
+        mockup.classList.add("on");
+    }
 
+    const mockupLeave = (e) => {
+        e.preventDefault();
+        mockup.classList.remove("on");
+    }
 
     return (
 
         <li className={className} key={keyNum}>
             <div className="left">
-                <div className="mockup">
+                <div className="mockup"
+                    onMouseEnter={mockupEnter}
+                    onMouseLeave={mockupLeave}
+                    onTouchStart={mockupEnter}
+                >
                     <div className="video_box">
 
                         <video src={` ${process.env.PUBLIC_URL}${videoUrl}`} muted autoPlay loop playsInline />
@@ -29,8 +42,8 @@ function Projects({ name, className, skill, function1, homepage, github, videoUr
                 <div className="project_tit">
                     <h2>{name}</h2>
                     <ul className="used_skills">
-                        {skill.map((item, idx) =>
-                            <li key={idx}>{item}</li>
+                        {skill.map((item, idx2) =>
+                            <li key={idx2}>{item}</li>
                         )}
                     </ul>
                 </div>
@@ -39,8 +52,8 @@ function Projects({ name, className, skill, function1, homepage, github, videoUr
 
                 <dl className="technique_list">
                     <dt>주요 기술</dt>
-                    {function1.map((item, idx) =>
-                        <dd key={idx}>🤍&nbsp;&nbsp;{item}</dd>
+                    {function1.map((item, idx1) =>
+                        <dd key={idx1}>🤍&nbsp;&nbsp;{item}</dd>
                     )}
                 </dl>
 
