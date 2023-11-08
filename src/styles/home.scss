@@ -7,7 +7,6 @@
     overflow: hidden;
 
     video {
-        width: 100%;
         filter: blur(5px) contrast(1.2);
     }
 
@@ -237,7 +236,8 @@
     .home {
 
         video {
-            filter: blur(0px);
+            width: 100vw;
+            filter: blur(5px);
         }
 
         .introduceText {
