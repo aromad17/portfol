@@ -8,6 +8,11 @@
     color: #fff;
 }
 
+h1::selection {
+    background-color: #ffa801;
+    color: #000;
+}
+
 
 ::selection {
     background-color: #ffa801;
