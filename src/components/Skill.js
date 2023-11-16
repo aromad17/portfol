@@ -142,6 +142,21 @@ function Skill({ setCheckHome }) {
                         </li>
                         <li>
                             <div className="left">
+                                <img src={process.env.PUBLIC_URL + '/img/next.png'} alt="me" />
+                                <h2>NEXT.js</h2>
+                            </div>
+                            <div className="right">
+                                <dl>
+                                    <dt>넥스트 개발자</dt>
+                                    <dd><FaRegCircle /> 넥스트를 이용하여 CSR, SSR 선택적으로 사이트 제작 가능합니다.</dd>
+                                    <dd><FaRegCircle /> 라우팅 구조를 이해하고 있습니다.</dd>
+                                    <dd><FaRegCircle /> 현재 더 활용도를 높이기 위해 공부 중입니다...</dd>
+
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="left">
                                 <img src={process.env.PUBLIC_URL + '/img/firebase.png'} alt="me" />
                                 <h2>firebase</h2>
                             </div>
@@ -210,6 +225,7 @@ function Skill({ setCheckHome }) {
                                 </dl>
                             </div>
                         </li>
+
                     </ul>
                 </div>
             </div>

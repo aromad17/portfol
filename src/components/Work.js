@@ -68,7 +68,7 @@ function Work({ setCheckHome }) {
         ulRef.current = document.querySelector(".work_list>ul");
 
         liRef.current.forEach(item => {
-            if (item.classList.contains("movie") || item.classList.contains("messanger")) {
+            if (item.classList.contains("movie") || item.classList.contains("messanger") || item.classList.contains("next_movie")) {
                 item.querySelector(".left").querySelector(".w3c").classList.add("noW3c");
             }
         }
@@ -118,16 +118,16 @@ function Work({ setCheckHome }) {
         setNum((prevNum) => {
             let newNum = prevNum - 1;
 
-            if (newNum === -4) {
+            if (newNum === -5) {
                 nextRef.current.style.display = "none";
             } else {
                 prevRef.current.style.display = "block";
                 nextRef.current.style.display = "block";
             }
 
-            if (newNum < -4) {
+            if (newNum < -5) {
 
-                newNum = -4;
+                newNum = -5;
 
                 return newNum;
             } else {

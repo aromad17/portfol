@@ -145,8 +145,6 @@
 
                 }
 
-
-
             }
 
             li:nth-child(1):hover {
@@ -175,16 +173,21 @@
             }
 
             li:nth-child(6):hover {
+                border-color: #404040;
+                background-color: rgba(94, 94, 94, 0.5)
+            }
+
+            li:nth-child(7):hover {
                 border-color: #ffca28;
                 background-color: rgba(255, 202, 40, 0.2);
             }
 
-            li:nth-child(7):hover {
+            li:nth-child(8):hover {
                 border-color: #cd6799;
                 background-color: rgba(205, 103, 153, 0.6);
             }
 
-            li:nth-child(8):hover {
+            li:nth-child(9):hover {
                 border-top-color: #f24e1e;
                 border-left-color: #1abcfe;
                 border-right-color: #a259ff;
@@ -192,12 +195,12 @@
                 background-color: rgba(0, 0, 0, 0.4);
             }
 
-            li:nth-child(9):hover {
+            li:nth-child(10):hover {
                 border-color: #30b7de;
                 background-color: rgba(48, 183, 222, 0.5);
             }
 
-            li:nth-child(10):hover {
+            li:nth-child(11):hover {
                 border-color: #ea771a;
                 background-color: rgba(234, 119, 26, 0.5);
             }
