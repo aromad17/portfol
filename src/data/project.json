@@ -105,6 +105,26 @@
       "github_link": "https://github.com/aromad17/movie_mini_next",
       "video_url": "/img/movie.mp4",
       "ios_video_url": "/img/movie.mov"
+    },
+    {
+      "id": 7,
+      "name": "SPAO",
+      "class": "next_spao",
+      "skill": ["HTML", "CSS", "JAVASCRIPT", "TYPESCRIPT", "NEXT.JS"],
+      "function": [
+        "swiperjs를 이용한 화면 구성",
+        "api 수작업으로 제작",
+        "첫화면은 CSR로 사용자에게 빠른 UX제공",
+        "상품 페이지엔 상품의 이름을 HEAD의 title로 사용해 seo최적화",
+        "404.js로 개별 페이지 구현",
+        "vercel을 이용한 배포 및 커스텀 도메인",
+        "* 로그인 및 파이어베이스를 이용한 기술 추가 예정 *",
+        "* 모바일 환경에선 spa사이트로 구현 예정 *"
+      ],
+      "page_link": "https://jjapao.sanghyeonzzang.com/",
+      "github_link": "https://github.com/aromad17/next_shopping",
+      "video_url": "/img/movie.mp4",
+      "ios_video_url": "/img/movie.mov"
     }
   ]
 }
