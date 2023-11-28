@@ -13,6 +13,7 @@ function Projects({
   github,
   videoUrl,
   iosVideoUrl,
+  isW3c,
 }) {
   const mockupRef = useRef(null);
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -65,13 +66,17 @@ function Projects({
         <div className="w3c">
           <ul>
             <li>기여도 100%</li>
-            <li
-              onClick={() => {
-                w3c({ className });
-              }}
-            >
-              W3C 웹 접근성 검사 결과 보기
-            </li>
+            {isW3c ? (
+              <li
+                onClick={() => {
+                  w3c({ className });
+                }}
+              >
+                W3C 웹 접근성 검사 결과 보기
+              </li>
+            ) : (
+              <></>
+            )}
           </ul>
         </div>
       </div>

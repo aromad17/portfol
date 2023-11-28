@@ -17,7 +17,8 @@
       "page_link": "https://movieflix.sanghyeonzzang.com/",
       "github_link": "https://github.com/aromad17/netflix",
       "video_url": "/img/movie.mp4",
-      "ios_video_url": "/img/movie.mov"
+      "ios_video_url": "/img/movie.mov",
+      "isW3c": false
     },
     {
       "id": 2,
@@ -35,7 +36,8 @@
       "page_link": "https://kkotalk.sanghyeonzzang.com/",
       "github_link": "https://github.com/aromad17/kkotalk",
       "video_url": "/img/messanger.webm",
-      "ios_video_url": "/img/messanger.mov"
+      "ios_video_url": "/img/messanger.mov",
+      "isW3c": false
     },
     {
       "id": 3,
@@ -55,7 +57,8 @@
       "page_link": "https://jjapao.sanghyeonzzang.com/",
       "github_link": "https://github.com/aromad17/next_shopping",
       "video_url": "/img/movie.mp4",
-      "ios_video_url": "/img/movie.mov"
+      "ios_video_url": "/img/movie.mov",
+      "isW3c": false
     },
     {
       "id": 4,
@@ -73,7 +76,8 @@
       "page_link": "https://nextmovie.sanghyeonzzang.com/",
       "github_link": "https://github.com/aromad17/movie_mini_next",
       "video_url": "/img/movie.mp4",
-      "ios_video_url": "/img/movie.mov"
+      "ios_video_url": "/img/movie.mov",
+      "isW3c": false
     },
     {
       "id": 5,
@@ -90,7 +94,8 @@
       "page_link": "http://ss_electric.sanghyeonzzang.com/",
       "github_link": "https://github.com/aromad17/samsung-electric_clone",
       "video_url": "/img/ss_elec.webm",
-      "ios_video_url": "/img/ss_elec.mov"
+      "ios_video_url": "/img/ss_elec.mov",
+      "isW3c": true
     },
     {
       "id": 6,
@@ -108,7 +113,8 @@
       "page_link": "http://ss_engineering.sanghyeonzzang.com/",
       "github_link": "https://github.com/aromad17/samsung-engineering_clone",
       "video_url": "/img/ss_engi.mp4",
-      "ios_video_url": "/img/ss_engi.mov"
+      "ios_video_url": "/img/ss_engi.mov",
+      "isW3c": true
     },
     {
       "id": 7,
@@ -124,7 +130,8 @@
       "page_link": "http://cjoneee.sanghyeonzzang.com/",
       "github_link": "https://github.com/aromad17/cjone_clone",
       "video_url": "/img/cjone.webm",
-      "ios_video_url": "/img/cjone.mov"
+      "ios_video_url": "/img/cjone.mov",
+      "isW3c": true
     }
   ]
 }

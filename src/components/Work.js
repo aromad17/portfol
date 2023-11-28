@@ -188,6 +188,7 @@ function Work({ setCheckHome }) {
                     iosVideoUrl={project.ios_video_url}
                     setIsClicked={setIsClicked}
                     setWorkName={setWorkName}
+                    isW3c={project.isW3c}
                   />
                 ))}
               </ul>
